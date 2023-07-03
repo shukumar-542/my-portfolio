@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.my-container{
+    @apply px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl lg:py-5
+  }
+  .image-wrap {
+    
+    overflow: hidden;
+    
+}
+.image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 3s ease-in-out;
+}
+.image-wrap:hover img {
+    object-position: bottom center;
+}
+
+.serviceCard img {
+    transition: transform 0.3s ease; 
+  }
+.serviceCard:hover img{
+    transform: scale(1.2);
+}
+.serviceCard:hover{
+    transition: all 1s ease; 
+
+}

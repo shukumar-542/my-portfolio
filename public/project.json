@@ -1,0 +1,56 @@
+[
+    {
+        "name": "SportZone",
+        "img": "https://i.ibb.co/rHVQgWS/ss2.png",
+     
+        "technology": [
+            "tailwind",
+            "DaisyUi",
+            "headlessUi" ,
+            "tanStackQuery" ,
+            "react-hook-form",
+            "swiper",
+            "Stripe" ,
+            "mongoDb",
+            "JWT" ,
+            "express"
+        ],
+       
+        
+        "description": "implement dashboard for admin ,instructor and student depend on their role student select their class by clicking select button .",
+        "serverSite": "https://github.com/shukumar-542/sport-zone-client",
+        "clientSite": "https://github.com/shukumar-542/sport-zone-client",
+        "liveSite": "https://sport-zone-ccbc8.web.app/"
+        
+    },
+    {
+        "name": "Food Mart",
+        "img": "https://i.ibb.co/5MBWv2V/ss3.png",
+        "technology": [
+            "React JS",
+            "Node JS",
+            "Express JS",
+            "MongoDB"
+        ],
+       
+        "description": "In this project home page have six chef information and recipe and contact section.",
+        "serverSite": "https://github.com/shukumar-542/chef-recipe-hunter-server",
+        "clientSite": "https://github.com/shukumar-542/chef-recipe-client",
+        "liveSite": "https://food-mart-auth.web.app/"
+       
+    },
+    {
+        "name": "Toy Bazar",
+        "img": "https://i.ibb.co/ccZNS1H/ss1.png",
+        "technology": [
+            "React JS",
+            "Node Js",
+            "Express JS"
+        ],
+        "description": "Nav bar show conditionally if user not signin then user not avaiable to see myToys and addToys oprtion. ",
+        "serverSite": "https://github.com/shukumar-542/toy-bazzar-server",
+        "clientSite": "https://github.com/shukumar-542/toy-bazzar",
+        "liveSite": "https://toy-bazar.web.app/"
+       
+    }
+]
