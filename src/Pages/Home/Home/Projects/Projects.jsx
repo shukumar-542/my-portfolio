@@ -15,11 +15,10 @@ const Projects = () => {
     useEffect(() => {
         fetch('project.json').then(res => res.json()).then(data => setProject(data))
     }, [])
-    console.log(projects);
     return (
-        <section className='py-20 my-container bg-[#252734]' id='project'  >
+        <section className='py-20 my-container bg-[#252734]  ' id='project'  >
             <div className='text-center'>
-                <h1 className='text-3xl lg:text-4xl font-bold text-white'>My Recent Projects</h1>
+                <h1 className='text-3xl lg:text-4xl font-bold text-white'>My Recent Projectssss</h1>
                 <p className='mt-4 text-base text-[#777980]  md:text-lg'>Here you will get the overview of latest <br className="hidden md:block" /> three projects done by me.</p>
             </div>
             <section className='my-10 grid grid-cols-1 lg:grid-cols-3 gap-5' >

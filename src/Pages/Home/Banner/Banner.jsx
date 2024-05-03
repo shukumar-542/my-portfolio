@@ -7,7 +7,7 @@ import JsIcon from '../../../assets/icons/js.png';
 import ReactIcon from '../../../assets/icons/react.png';
 import ExpressJsIcon from '../../../assets/icons/expressjs-icon.png';
 import MongodbIcon from '../../../assets/icons/mongodb.png';
-import portfolioImage from '../../../assets/icons/profile.jpg';
+import portfolioImage from '../../../assets/icons/Shukumar.png';
 import resume from '../../../assets/resume.pdf'
 import { TypeAnimation } from 'react-type-animation';
 
@@ -22,12 +22,14 @@ const Banner = () => {
         link.click();
     };
     return (
-        <section id='home' className='grid lg:grid-cols-2 justify-between bg-[#252734] text-[#FFFFFF] items-center gap-2 my-container '>
+        <section id='home' className='grid lg:grid-cols-2 justify-between bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF] items-center gap-2 my-container '>
             <div className='order-2 lg:order-1 ps-5'>
                 <h1 className='text-xl lg:text-2xl font-serif'>
                     Hello, My name is
                     <br />
-                    <span className='font-bold text-4xl lg:text-6xl text-[#FFFFFF]'>Shukumar Ghosh</span>
+                    <span className='font-bold text-4xl lg:text-6xl bg-gradient-to-r from-[#8A54F7] via-[#BFA2FB] to-[#ECE2FE] inline-block text-transparent bg-clip-text my-2s'>Shukumar Ghosh</span>
+
+                    {/* <h1 className="">hello world</h1> */}
                 </h1>
                 <p className='text-2xl font-semibold font-serif opacity-50'>
                     <TypeAnimation
@@ -109,9 +111,9 @@ const Banner = () => {
                     </div>
                 </div>
 
-                <button onClick={handleDownload} className='flex justify-center items-center bg-sky-700 px-5 py-4 text-white rounded-lg font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-sky-800'>
+                <button onClick={handleDownload} className='flex justify-center items-center  px-5 py-4 text-[#8750F7] hover:text-white rounded-full border-[#8750F7] font-semibold uppercase tracking-wide transition-colors duration-300 border  hover:bg-[#8750F7]'>
 
-                    Download Resume
+                    Download CV
                     <span className='ml-3 text-lg'><BsArrowDownCircle /></span>
                 </button>
 
@@ -119,8 +121,8 @@ const Banner = () => {
             {/* image  */}
             <div className=' order-1 lg:order-2 hidden lg:block w-1/2 mx-auto '>
 
-                <div className="rounded-xl w-72 h-96 mx-auto  mt-10 bg-gradient-to-r p-[6px] from-[#6EE7B7] via-[#3B82F6] to-[#9333EA]">
-                    <div className="flex flex-col justify-between h-full bg-white text-white rounded-lg ">
+                <div className="rounded-xl w-80 h-96 mx-auto  mt-10 ">
+                    <div className="flex flex-col justify-between h-full bg-white text-white rounded-lg transition-colors duration-300  border-[#5b37a1] hover:border-[#7340d8]   border-[3px]">
                         <img src={portfolioImage} className='h-full rounded-lg' alt="" />
 
                     </div>
