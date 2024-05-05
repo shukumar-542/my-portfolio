@@ -5,9 +5,8 @@ import { FaPhoneAlt } from 'react-icons/fa';
 import { BsWhatsapp } from 'react-icons/bs';
 import { AiOutlineMail } from 'react-icons/ai';
 import { CiLocationOn } from 'react-icons/ci';
-import { AiFillLinkedin } from 'react-icons/ai';
-import { BsFacebook } from 'react-icons/bs';
-import { AiFillGithub } from 'react-icons/ai';
+
+import Heading from '../../../components/ui/Heading';
 
 
 
@@ -28,45 +27,19 @@ const Contact = () => {
     };
 
     return (
-        <section id='contact' className="bg-[#252734] my-container py-5 text-[#777980] ">
+        <section id='contact' className="bg-[#050709] my-container py-5 text-[#777980] ">
 
             <div className='text-center'>
-                <h1 className='text-3xl lg:text-4xl font-bold text-white'>Contact Me</h1>
+               
+                <Heading>Contact Me</Heading>
                 <p className='mt-4 text-base  md:text-lg mb-5 text-[#777980] '>Please fill this form and give your information <br className="hidden md:block" /> I will contact you very soon. </p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 gap-5 justify-center mt-10 '>
-                <div className='bg-[#182234] p-10 rounded-xl shadow-2xl ' data-aos-delay="50" data-aos-duration="1000" data-aos="fade-up-right">
-                    <h1 className='text-4xl text-white'>Contact information</h1>
-                    <div className='mt-10 space-y-4'>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
-                            <FaPhoneAlt className='text-[#075985]'></FaPhoneAlt>
-                            +8801872999038
-                        </div>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
-                            <BsWhatsapp className='text-[#075985]'></BsWhatsapp>
-                            +8801872999038
-                        </div>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
-                            <AiOutlineMail className='text-[#075985] '></AiOutlineMail>
-                            shukumar542@gmail.com
-                        </div>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
-                            <CiLocationOn className='text-[#075985]'></CiLocationOn>
-                            Dhanmondi,Dhaka
-                        </div>
-                        <div className='pt-10'>
-                            <h1 className='text-2xl text-white font-semibold'>Connect With Me </h1>
-                            <div className='flex gap-5 mt-5 '>
-                                <AiFillGithub className='text-[#075985] text-5xl cursor-pointer'></AiFillGithub>
-                                <BsFacebook className='text-[#075985] text-5xl cursor-pointer'></BsFacebook>
-                                <AiFillLinkedin className='text-[#075985] text-5xl cursor-pointer'></AiFillLinkedin>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              
-               
-                <div className='py-10 border p-5 rounded-xl border-[#777980] bg-[#182234] shadow-lg'>
+            <div className='my-container grid grid-cols-1 md:grid-cols-2 gap-5 justify-center mt-10 '>
+
+
+                <div className='py-10  p-5 rounded-xl  bg-[#140C1C] shadow-md'>
+
+                    <Heading>Let’s work together!</Heading>
                     <form action="" ref={form} onSubmit={sendEmail} data-aos="zoom-in-up" data-aos-delay="50" data-aos-duration="1000">
                         <div className="mb-4">
                             <label htmlFor="name" className="block mb-2 text-sm font-medium">Your Name</label>
@@ -74,8 +47,8 @@ const Contact = () => {
                                 name="user_name"
                                 id="name"
                                 type="text"
-                                className='bg-[#777980]  text-white text-sm rounded-lg  block w-full p-2.5'
-                                placeholder='Your name here'
+                                className='bg-[#050709]  text-sm rounded-lg  block w-full p-2.5'
+                                placeholder='Your Name '
                                 required
                             />
                         </div>
@@ -85,8 +58,8 @@ const Contact = () => {
                                 name="user_email"
                                 id="email"
                                 type="email"
-                                className='bg-[#777980] text-sm text-white rounded-lg  block w-full p-2.5'
-                                placeholder='Your email address here'
+                                className='bg-[#050709] text-sm rounded-lg  block w-full p-2.5'
+                                placeholder='Your Email Address '
                                 required />
                         </div>
                         <div className="mb-4">
@@ -94,7 +67,7 @@ const Contact = () => {
                             <textarea
                                 name="message"
                                 id="message"
-                                className='bg-[#777980] text-white  text-sm rounded-lg block w-full p-2.5'
+                                className='bg-[#050709]   text-sm rounded-lg block w-full p-2.5'
                                 placeholder=' Your message here'
                                 rows="5"
                                 required />
@@ -102,11 +75,53 @@ const Contact = () => {
                         <div>
                             <input
                                 type="submit"
-                                value="submit"
-                                className='bg-sky-700 px-5 py-2 cursor-pointer text-white rounded-lg font-semibold uppercase tracking-wide transition-colors duration-300 hover:bg-sky-800' />
+                                value="Send Message"
+                                className='contact-btn px-5 py-2 cursor-pointer text-white rounded-lg font-semibold  tracking-wide transition-colors duration-300 ' />
                         </div>
                     </form>
                 </div>
+
+
+
+                <div className=' p-10 rounded-xl shadow-2xl ' data-aos-delay="50" data-aos-duration="1000" data-aos="fade-up-right">
+                    {/* <h1 className='text-4xl text-white'></h1> */}
+                    <Heading>Contact information</Heading>
+                    <div className='mt-10 space-y-4'>
+                        <div className='flex items-center gap-2 text-2xl text-white'>
+                            <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
+                                <FaPhoneAlt size={20}></FaPhoneAlt>
+                            </div>
+                            +8801872999038
+                        </div>
+                        <div className='flex items-center gap-2 text-2xl text-white'>
+
+                            <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
+                                <BsWhatsapp className=''></BsWhatsapp>
+                            </div>
+
+                            +8801872999038
+                        </div>
+                        <div className='flex items-center gap-2 text-2xl text-white'>
+                            <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
+                                <AiOutlineMail className=''></AiOutlineMail>
+                            </div>
+
+
+                            shukumar542@gmail.com
+                        </div>
+                        <div className='flex items-center gap-2 text-2xl text-white'>
+                            
+                            <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
+                            <CiLocationOn className=''></CiLocationOn>
+                            </div>
+                            Dhanmondi,Dhaka
+                        </div>
+                       
+                    </div>
+                </div>
+
+
+
             </div>
         </section>
     );
