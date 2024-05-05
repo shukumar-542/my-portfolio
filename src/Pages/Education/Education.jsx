@@ -3,7 +3,7 @@ import { FaGraduationCap } from "react-icons/fa";
 import About from "../About/About";
 const Education = () => {
     return (
-        <div className="my-container bg-[#050709]">
+        <div className="my-container bg-[#0F0715]">
             <div className="flex justify-center items-center gap-4">
                 <FaGraduationCap className="text-[#824DEE]" size={40} />
                 <Heading className='text-7xl'>My Education</Heading>
