@@ -1,4 +1,64 @@
 [
+    
+    {
+        "name": "Baby Food",
+        "img": "https://i.ibb.co/vwDJ53L/screencapture-baby-food-eight-vercel-app-2024-05-05-18-27-07.png",
+        "technology": [
+            "Next Js",
+            "Typescript",
+            "Redux",
+            "Framer motion",
+            "tailwind",
+            "React icons"
+            
+            
+        ],
+       
+        "feature":[
+            "User Can see all flash sale products(SSG)",
+            "User can find the product by popular product category,",
+            "Show trending product by using product rating",
+            "Show all product on product page (SSG) user can find the product by using product category",
+            "User can find their product using rating and price filter.",
+            "user can see product details",
+            "user can see all product on dashboard page in tabular form."
+            
+        ],
+        "serverSite": "https://github.com/shukumar-542/baby-food-server",
+        "clientSite": "https://github.com/shukumar-542/baby-food-frontend",
+        "liveSite": "https://baby-food-eight.vercel.app/"
+       
+    },
+    {
+        "name": "Donative (Winter clothes distribution )",
+        "img": "https://i.ibb.co/J3gXtrT/screencapture-winter-clothe-distribution-client-eight-vercel-app-2024-05-05-18-41-52.png",
+        "technology": [
+            "   ",
+            "Typescript",
+            "Redux",
+            "RTK Query",
+            "lucide-react",
+            "Framer motion",
+            "sweetalert",
+            "Node Js",
+            "Express JS"
+        ],
+        "feature": [
+            "User create their own account and donate winter clothes.",
+            "Unauthorized user can not access dashboard.",
+            "Unauthorized user see all clothes and details,",
+            "authorized used can be add their product and see their own dashboard with information.and they can be able to update and delete their product.",
+            "Enable users to switch between dark and light",
+            "Show leaderboard to showcase the top donors who have made significant contributions",
+            "community gratitude wall where users can post comments of appreciation for the support they've received during difficult times",
+            "Donors will be able to post testimonials about the donation posts.",
+            "Implement volunteers users can provide their information like their email, phone number"
+        ],
+        "serverSite": "https://github.com/shukumar-542/winter-clothe-distribution-backend",
+        "clientSite": "https://github.com/shukumar-542/winter-clothe-distribution-client",
+        "liveSite": "https://winter-clothe-distribution-client-eight.vercel.app/"
+       
+    },
     {
         "name": "SportZone",
         "img": "https://i.ibb.co/rHVQgWS/ss2.png",
@@ -22,35 +82,7 @@
         "clientSite": "https://github.com/shukumar-542/sport-zone-client",
         "liveSite": "https://sport-zone-ccbc8.web.app/"
         
-    },
-    {
-        "name": "Food Mart",
-        "img": "https://i.ibb.co/5MBWv2V/ss3.png",
-        "technology": [
-            "React JS",
-            "Node JS",
-            "Express JS",
-            "MongoDB"
-        ],
-       
-        "description": "In this project home page have six chef information and recipe and contact section.",
-        "serverSite": "https://github.com/shukumar-542/chef-recipe-hunter-server",
-        "clientSite": "https://github.com/shukumar-542/chef-recipe-client",
-        "liveSite": "https://food-mart-auth.web.app/"
-       
-    },
-    {
-        "name": "Toy Bazar",
-        "img": "https://i.ibb.co/ccZNS1H/ss1.png",
-        "technology": [
-            "React JS",
-            "Node Js",
-            "Express JS"
-        ],
-        "description": "Nav bar show conditionally if user not signin then user not avaiable to see myToys and addToys oprtion. ",
-        "serverSite": "https://github.com/shukumar-542/toy-bazzar-server",
-        "clientSite": "https://github.com/shukumar-542/toy-bazzar",
-        "liveSite": "https://toy-bazar.web.app/"
-       
     }
+    
+    
 ]

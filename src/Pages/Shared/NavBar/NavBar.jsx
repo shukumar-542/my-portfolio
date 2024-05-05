@@ -23,6 +23,8 @@ const NavBar = () => {
                         <div>
                             <ul className='items-center hidden space-x-8 lg:flex'>
                                 <li className="text-white  "><a href="#home">Home</a></li>
+                                <li className="text-white  "><a href="#about">Resume</a></li>
+                                <li className="text-white  "><a href="#skills">Skills</a></li>
                                 <li className="text-white   "><a href="#about">About Me</a></li>
                                 <li className="text-white contact-btn cursor-pointer "><a href="#contact">Contact Me</a></li>
 
@@ -68,6 +70,7 @@ const NavBar = () => {
                                                 <ul className='space-y-4'>
                                                     <li className="text-white  "><a href="#home">Home</a></li>
                                                     <li className="text-white  "><a href="#about">About Me</a></li>
+                                                    <li className="text-white  "><a href="#about">Resume</a></li>
                                                     <li className="text-white "><a href="#contact">Contact Me</a></li>
 
                                                    

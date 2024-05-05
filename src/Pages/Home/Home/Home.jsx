@@ -1,4 +1,3 @@
-import About from "../../About/About";
 import Education from "../../Education/Education";
 import Services from "../../Services/Services";
 import Skill from "../../Skill/Skill";
@@ -10,8 +9,8 @@ const Home = () => {
     return (
         <div className="">
             <Banner></Banner>
+            {/* <About></About> */}
             <Projects></Projects>
-            <About></About>
             <Skill></Skill>
             <Services></Services>
             <Education/>
