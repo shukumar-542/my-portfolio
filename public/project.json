@@ -1,8 +1,9 @@
 [
     
     {
-        "name": "Baby Food",
-        "img": "https://i.ibb.co/vwDJ53L/screencapture-baby-food-eight-vercel-app-2024-05-05-18-27-07.png",
+        "name": "Baby Food(A Responsive project for Baby Food e-commerce) ",
+        "description" : "This project aims to develop the features athe platform will deliver a seamless and immersive shopping experience, facilitating informed purchasing decisions and fostering long-term customer satisfaction among baby care enthusiasts.",
+         "img": "https://i.ibb.co/vwDJ53L/screencapture-baby-food-eight-vercel-app-2024-05-05-18-27-07.png",
         "technology": [
             "Next Js",
             "Typescript",
@@ -10,8 +11,6 @@
             "Framer motion",
             "tailwind",
             "React icons"
-            
-            
         ],
        
         "feature":[
@@ -30,10 +29,10 @@
        
     },
     {
-        "name": "Donative (Winter clothes distribution )",
+        "name": "Donative (A Responsive Winter clothes distribution )",
         "img": "https://i.ibb.co/J3gXtrT/screencapture-winter-clothe-distribution-client-eight-vercel-app-2024-05-05-18-41-52.png",
-        "technology": [
-            "   ",
+        "description": "The project aims to develop a comprehensive Distribution of Winter Clothes Management Platform using React, Redux for state management, RTK Query for efficient data fetching, and React Router DOM for navigation",
+         "technology": [
             "Typescript",
             "Redux",
             "RTK Query",
@@ -60,7 +59,7 @@
        
     },
     {
-        "name": "SportZone",
+        "name": "SportZone(A full-stack responsive project for online sport course) ",
         "img": "https://i.ibb.co/rHVQgWS/ss2.png",
      
         "technology": [
@@ -77,7 +76,7 @@
         ],
        
         
-        "description": "implement dashboard for admin ,instructor and student depend on their role student select their class by clicking select button .",
+        "description": "The project aim is provide online sport teaching.Implement dashboard for admin ,instructor and student depend on their role student select their class by clicking select button .",
         "serverSite": "https://github.com/shukumar-542/sport-zone-client",
         "clientSite": "https://github.com/shukumar-542/sport-zone-client",
         "liveSite": "https://sport-zone-ccbc8.web.app/"

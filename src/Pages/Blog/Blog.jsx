@@ -19,7 +19,7 @@ const Blog = () => {
             <div className="my-container grid grid-cols-1 md:grid-cols-2 gap-5">
                 {
                     blogs.map((blog, index) => <Link to={`/blog/${blog?.id}`} key={index} className="max-w-xl bg-[#190D28]  rounded-xl shadow-xl cursor-pointer" data-aos="fade-right" data-aos-duration="1000">
-                        <div className=" h-[300px] w-[100%] relative transition-all duration-500 serviceCard overflow-hidden" >
+                        <div className=" h-[300px] w-[100%] relative transition-all duration-500 serviceCard overflow-hidden rounded-md" >
                             <img src={blog.image} className="h-[300px] w-[100%]" />
 
                         </div>

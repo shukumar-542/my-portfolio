@@ -1,9 +1,14 @@
 import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
-// import { BiLogoGmail } from "react-icons/bi";
-
+import resume from '../../../assets/shukumar.pdf'
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const handleDownload = () => {
+        const link = document.createElement('a');
+        link.href = resume;
+        link.download = 'resume.pdf'; 
+        link.click();
+    }
     // const navOptions = <>
     //     <li className="text-white  "><a href="#home">Home</a></li>
     //     <li className="text-white  "><a href="#about">About Me</a></li>
@@ -15,15 +20,17 @@ const NavBar = () => {
             <div className=' sticky top-0 bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF] shadow-md z-10 py-2'>
                 <div className='max-w-screen-xl  py-2 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-2xl lg:px-10 '>
                     <div className='relative flex items-center justify-between'>
-                        <div className='font-bold  text-gradient'>
+                        <div className='font-bold font-serif text-gradient'>
                         {/* <BiLogoGmail /> */}
 
-                            shukumar542@gmail.com</div>
+                            <>Shukumar Ghosh</>
+                            
+                            </div>
 
                         <div>
                             <ul className='items-center hidden space-x-8 lg:flex'>
                                 <li className="text-white  "><a href="#home">Home</a></li>
-                                <li className="text-white  "><a href="#about">Resume</a></li>
+                                <li className="text-white cursor-pointer "><a onClick={handleDownload} >Resume</a></li>
                                 <li className="text-white  "><a href="#skills">Skills</a></li>
                                 <li className="text-white   "><a href="#about">About Me</a></li>
                                 <li className="text-white contact-btn cursor-pointer "><a href="#contact">Contact Me</a></li>
@@ -49,7 +56,7 @@ const NavBar = () => {
                             {
                                 isMenuOpen && (
                                     <div className='absolute z-10 top-0 left-0 w-full'>
-                                        <div className='p-5 bg-[#252734] text-[#FFFFFF] border rounded shadow-sm'>
+                                        <div className='p-5 bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF] border rounded shadow-sm'>
                                             <div className='flex items-center justify-between mb-4'>
                                                 <div>
                                                     <h1 className='font-bold text-2xl'>Shukumar</h1>
@@ -70,7 +77,7 @@ const NavBar = () => {
                                                 <ul className='space-y-4'>
                                                     <li className="text-white  "><a href="#home">Home</a></li>
                                                     <li className="text-white  "><a href="#about">About Me</a></li>
-                                                    <li className="text-white  "><a href="#about">Resume</a></li>
+                                                    <li className="text-white  " onClick={handleDownload} ><a href="#about">Resume</a></li>
                                                     <li className="text-white "><a href="#contact">Contact Me</a></li>
 
                                                    

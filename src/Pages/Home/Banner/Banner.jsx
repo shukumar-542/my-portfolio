@@ -8,7 +8,7 @@ import ReactIcon from '../../../assets/icons/react.png';
 import ExpressJsIcon from '../../../assets/icons/expressjs-icon.png';
 import MongodbIcon from '../../../assets/icons/mongodb.png';
 import portfolioImage from '../../../assets/icons/Shukumar.png';
-import resume from '../../../assets/resume.pdf'
+import resume from '../../../assets/shukumar.pdf'
 import { TypeAnimation } from 'react-type-animation';
 
 
@@ -18,7 +18,7 @@ const Banner = () => {
     const handleDownload = () => {
         const link = document.createElement('a');
         link.href = resume;
-        link.download = 'resume.pdf'; // Set the desired file name for download
+        link.download = 'resume.pdf'; 
         link.click();
     };
     return (
