@@ -1,0 +1,45 @@
+[
+    {
+        "id" : 1,
+        "image" : "https://i.ibb.co/MkMGBP2/Unofficial-Java-Script-logo-2-svg.png",
+        "title" : "What is javascript and how does work it",
+        "description" : "Javascript  is the programming language of the web,  it's a single threated and non blocking high level programming language.its a interpreted programming language. by using javascript to make web page is more interactive",
+        "date":"25-03-2024",
+        "advantage" : "Feature of javascript",
+        "feature" : [
+            "Javascript is Asynchronous Programming with Promises and Async/Await",
+            "Javascript is inherently Event-driven Programming it's allow to the user action which developer define the user action and asynchronous operation",
+            
+           "It's a prototype based programming language object in javascript created for prototype base language rather than class based language it's provide more power full code"
+            
+        ],
+        "disAdvantage" : "Why We used javascript" ,
+        "drawback" : [
+            "Javascript is a cross platform support programming language which support all major web browser including chrome, safari,Edge, firefox it's ensure that javascript code can be run consistently run any web browser and operating system",
+            
+            "The main reason using javascript is Build a Client  Side web application using this language create a interactive and functionality on the client side of web application and it's also allow the developer manipulate the HTML DOM(document object model) and handle user interaction and dynamically update content without any reload the web page"
+            
+        ]
+    },
+    {
+        "id" : 2,
+        "image" : "https://i.ibb.co/tLjM2hy/nextjs7685-logowik-com.webp",
+        "title" : "What is Next js and why we use Next.js",
+        "description" : "Next.js is a React framework that provide server-side rendering, static site generation, and client-side rendering—all out of the box Developed by Vercel. by using next js create a high quality web application with the power of react component ",
+        "date":"04-03-2024",
+        "advantage" : "Feature of Next.js",
+        "feature" : [
+            "Next.js, you can render React components on the server side, delivering fully rendered HTML to the client for faster initial page loads and improved SEO.",
+            
+            "Next.js allows you to pre-render pages at build time, resulting in static HTML files that can be served to users instantly, without the need for server-side processing."
+            
+        ],
+        "disAdvantage" : "Why We used Next.js" ,
+        "drawback" : [
+            "Performance By leveraging server-side rendering and static site generation, Next.js ensures blazing-fast page loads and superior performance, resulting in improved user satisfaction and search engine rankings.",
+            
+            "SEO-Friendly With its ability to render pages on the server side, Next.js produces HTML content that's easily crawlable by search engines, boosting discoverability and organic traffic"
+            
+        ]
+    }
+]

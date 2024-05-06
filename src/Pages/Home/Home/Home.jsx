@@ -1,3 +1,4 @@
+import Blog from "../../Blog/Blog";
 import Education from "../../Education/Education";
 import Services from "../../Services/Services";
 import Skill from "../../Skill/Skill";
@@ -14,6 +15,7 @@ const Home = () => {
             <Skill></Skill>
             <Services></Services>
             <Education/>
+            <Blog/>
             <Contact></Contact>
         </div>
     );

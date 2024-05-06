@@ -5,6 +5,7 @@ import {
 import Home from "../Pages/Home/Home/Home";
 import MainLayouts from "../Layouts/MainLayouts";
 import About from "../Pages/About/About";
+import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 
 const router = createBrowserRouter([
     {
@@ -19,8 +20,13 @@ const router = createBrowserRouter([
           path : '/about',
           element : <About></About>
         }
+        
       ]
     },
+    {
+      path : "/blog/:id",
+      element : <BlogDetails/>
+    }
   ]);
 
 export default router;

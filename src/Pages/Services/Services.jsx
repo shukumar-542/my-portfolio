@@ -24,7 +24,7 @@ const Services = () => {
                     <div data-aos="fade-down" className='bg-[#1e112c] rounded-md hover:bg-[#2A1454] serviceCard p-5 space-y-4 transition-all duration-500'>
                         <img src={logo4} alt="" className='h-20 ' />
                         <h1 className='text-2xl font-semibold'>Front-End Development</h1>
-                        <p>Front End Development using NextJs, ReactJs</p>
+                        <p>Front End Development using NextJs,Redux, ReactJs</p>
                     </div>
                     <div data-aos="fade-down" className='bg-[#1e112c] rounded-md hover:bg-[#2A1454]  serviceCard p-5 space-y-4'>
                         <img src={logo1} alt="" className='h-20 ' />
