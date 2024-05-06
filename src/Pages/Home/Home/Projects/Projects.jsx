@@ -23,7 +23,7 @@ const Projects = () => {
                 <Heading>My Recent Works</Heading>
                 <p className='text-base text-[#777980]  md:text-lg'>Here you will get the overview of latest <br className="hidden md:block" /> three projects done by me.</p>
             </div>
-            <section className='my-10 grid grid-cols-1 lg:grid-cols-3 gap-5' >
+            <section className='my-10 grid grid-cols-1 lg:grid-cols-3 items-center justify-items-center gap-5' >
                 {
                     projects.map((project, index) => <div key={index} className="max-w-xl bg-[#190D28]  rounded-xl shadow-xl" data-aos="fade-right" data-aos-duration="1000">
                         <div className="px-5 pt-5 image-wrap h-64" >
@@ -37,7 +37,7 @@ const Projects = () => {
                                     View Details
                                 </label>
                                 <button >
-                                    <a target="_blank" href={project.liveSite} rel='noreferrer' role="button" className="contact-btn px-6 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live Projects</a>
+                                    <a target="_blank" href={project.liveSite} rel='noreferrer' role="button" className="contact-btn px-3 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live </a>
                                 </button>
                             </div>
                             <div className='text-white flex gap-2 justify-between py-4 px-5'>

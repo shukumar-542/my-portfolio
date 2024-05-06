@@ -9,21 +9,17 @@ const NavBar = () => {
         link.download = 'resume.pdf'; 
         link.click();
     }
-    // const navOptions = <>
-    //     <li className="text-white  "><a href="#home">Home</a></li>
-    //     <li className="text-white  "><a href="#about">About Me</a></li>
-    //     <li className="text-white "><a href="#contact">Contact Me</a></li>
-    // </>
+    
     return (
         
          
-            <div className=' sticky top-0 bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF] shadow-md z-10 py-2'>
+            <div className='  mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-2xl sticky top-0 bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF] shadow-md z-10 py-2'>
                 <div className='max-w-screen-xl  py-2 mx-auto sm:max-w-full md:max-w-full lg:max-w-screen-2xl lg:px-10 '>
                     <div className='relative flex items-center justify-between'>
                         <div className='font-bold font-serif text-gradient'>
                         {/* <BiLogoGmail /> */}
 
-                            <>Shukumar Ghosh</>
+                            Shukumar Ghosh
                             
                             </div>
 

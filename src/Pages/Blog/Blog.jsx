@@ -11,7 +11,7 @@ const Blog = () => {
 
 
     return (
-        <div className="my-container bg-[#0F0715]">
+        <div id="blog" className="my-container bg-[#0F0715]">
             <div className="text-center">
                 <Heading>Recent Blogs</Heading>
             </div>
@@ -23,12 +23,12 @@ const Blog = () => {
                             <img src={blog.image} className="h-[300px] w-[100%]" />
 
                         </div>
-                        <div className="absolute bottom-2 rounded-md shadow-md   bg-[#3A1E71] py-5  px-5 mx-2 ">
+                        <div className="absolute w-[80%] left-10 bottom-2 rounded-md shadow-md   bg-[#3A1E71] py-5   px-5 ">
                             <p className="flex font-semibold text-xl text-[#a078ee] items-center gap-2">
                                 <MdDateRange />
                                 {blog?.date}
                             </p>
-                            <h1 className="text-white  text-3xl font-bold">{blog?.title}</h1>
+                            <h1 className="text-white  text-xl font-bold">{blog?.title}</h1>
                         </div>
 
                     </Link>)

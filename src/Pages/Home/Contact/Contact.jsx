@@ -34,7 +34,7 @@ const Contact = () => {
                 <Heading>Contact Me</Heading>
                 <p className='mt-4 text-base  md:text-lg mb-5 text-[#777980] '>Please fill this form and give your information <br className="hidden md:block" /> I will contact you very soon. </p>
             </div>
-            <div className='my-container grid grid-cols-1 md:grid-cols-2 gap-5 justify-center mt-10 '>
+            <div className='my-container grid grid-cols-1 md:grid-cols-2 md:gap-5 justify-center mt-10 '>
 
 
                 <div className='py-10  p-5 rounded-xl  bg-[#140C1C] shadow-md'>
@@ -87,13 +87,13 @@ const Contact = () => {
                     {/* <h1 className='text-4xl text-white'></h1> */}
                     <Heading>Contact information</Heading>
                     <div className='mt-10 space-y-4'>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
+                        <div className='flex items-center gap-2  text-white'>
                             <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
                                 <FaPhoneAlt size={20}></FaPhoneAlt>
                             </div>
                             +8801872999038
                         </div>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
+                        <div className='flex items-center gap-2 text-white'>
 
                             <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
                                 <BsWhatsapp className=''></BsWhatsapp>
@@ -101,7 +101,7 @@ const Contact = () => {
 
                             +8801872999038
                         </div>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
+                        <div className='flex items-center gap-2  text-white'>
                             <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
                                 <AiOutlineMail className=''></AiOutlineMail>
                             </div>
@@ -109,7 +109,7 @@ const Contact = () => {
 
                             shukumar542@gmail.com
                         </div>
-                        <div className='flex items-center gap-2 text-2xl text-white'>
+                        <div className='flex items-center gap-2  text-white'>
                             
                             <div className='bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]  p-3 rounded-full'>
                             <CiLocationOn className=''></CiLocationOn>

@@ -1,7 +1,6 @@
 import { BsArrowDownCircle } from 'react-icons/bs';
 import { MdMarkEmailRead } from 'react-icons/md';
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai';
-import HTML5Icon from '../../../assets/icons/html-5.png';
 import CSS3Icon from '../../../assets/icons/css3.png';
 import JsIcon from '../../../assets/icons/js.png';
 import ReactIcon from '../../../assets/icons/react.png';
@@ -10,6 +9,7 @@ import MongodbIcon from '../../../assets/icons/mongodb.png';
 import portfolioImage from '../../../assets/icons/Shukumar.png';
 import resume from '../../../assets/shukumar.pdf'
 import { TypeAnimation } from 'react-type-animation';
+import { SiNextdotjs, SiRedux } from 'react-icons/si';
 
 
 
@@ -29,16 +29,13 @@ const Banner = () => {
                     <br />
                     <span className='font-bold text-4xl lg:text-6xl bg-gradient-to-r from-[#8A54F7] via-[#BFA2FB] to-[#ECE2FE] inline-block text-transparent bg-clip-text my-2s'>Shukumar Ghosh</span>
 
-                    {/* <h1 className="">hello world</h1> */}
                 </h1>
-                <p className='text-2xl font-semibold font-serif opacity-50'>
+                <p className='text-2xl bg-gradient-to-r from-[#8A54F7] via-[#BFA2FB] to-[#ECE2FE] inline-block text-transparent bg-clip-text font-semibold font-serif opacity-50'>
                     <TypeAnimation
                         sequence={[
-                            'I am a Web Developer',
+                            'I am a Frontend Developer',
                             1000,
                             'I am Professional Coder',
-                            1000,
-                            'I am MERN Stack Developer',
                             1000,
                             'I am React Developer.',
                             1000
@@ -90,22 +87,25 @@ const Banner = () => {
                     <p className='uppercase font-bold'>List of Technologies : </p>
                     {/* icons  */}
                     <div className='flex flex-wrap gap-5 my-3'>
-                        <div className='border border-sky-700 rounded-full p-3 w-12 h-12'>
-                            <img src={HTML5Icon} alt="" />
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
+                        <SiNextdotjs size={20} className='text-gray-200' />
                         </div>
-                        <div className='border border-sky-700 rounded-full p-3 w-12 h-12'>
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
+                        <SiRedux size={20} className='text-[#7248B6]' />
+                        </div>
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
                             <img src={CSS3Icon} alt="" />
                         </div>
-                        <div className='border border-sky-700 rounded-full p-3 w-12 h-12'>
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
                             <img src={JsIcon} alt="" />
                         </div>
-                        <div className='border border-sky-700 rounded-full p-3 w-12 h-12'>
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
                             <img src={ReactIcon} alt="" />
                         </div>
-                        <div className='border border-sky-700 rounded-full p-3 w-12 h-12'>
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
                             <img src={ExpressJsIcon} alt="" />
                         </div>
-                        <div className='border border-sky-700 rounded-full p-3 w-12 h-12'>
+                        <div className='border border-[#8750F7] rounded-full p-3 w-12 h-12'>
                             <img src={MongodbIcon} alt="" />
                         </div>
                     </div>
