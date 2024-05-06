@@ -29,17 +29,37 @@
         "date":"04-03-2024",
         "advantage" : "Feature of Next.js",
         "feature" : [
-            "Next.js, you can render React components on the server side, delivering fully rendered HTML to the client for faster initial page loads and improved SEO.",
+            "Using the Next.js you can render the react component on the serve side, if you used the react then you fetching the problem for SEO optimizing  but Next.js is provide SEO friendly site ",
             
-            "Next.js allows you to pre-render pages at build time, resulting in static HTML files that can be served to users instantly, without the need for server-side processing."
+            "Next.js provide you client site rendering(CSR) and pre-rendering,  in pre-rendering static HTML files that can be served to users instantly, for served the html page which not to needed and process on server side."
             
         ],
         "disAdvantage" : "Why We used Next.js" ,
         "drawback" : [
-            "Performance By leveraging server-side rendering and static site generation, Next.js ensures blazing-fast page loads and superior performance, resulting in improved user satisfaction and search engine rankings.",
+            "If You want to increase you site performance then Next js is provide server site rendering and static site generation, Next.js ensures blazing-fast page loads and superior performance, resulting in improved user satisfaction and search engine rankings.",
             
             "SEO-Friendly With its ability to render pages on the server side, Next.js produces HTML content that's easily crawlable by search engines, boosting discoverability and organic traffic"
             
         ]
+    },
+    {
+        "id": 3,
+        "title" : "Data Fetching with Tanstack Query",
+        "image" : "https://i.ibb.co/YbRK0YJ/1686052318378.png",
+        "description" : "TANStack query is easiest way to data fetching ,catching and update server state in your web application. The main purpose tanstack query is to simplify data fetching process. it' provided convenient and advance feature that helps you manage data fetching.",
+        "date":"02-08-2023",
+        "advantage" : "useQuery hooks",
+        "feature" : [
+            "tanstack provide useQuery() hook for data fetching. useQuery hooks get object (querykey, queryFn and retry).as initial value for fetching data. queryFn is a synchronous process. Request for api in this queryFn as like useEffect in axios or fetch"
+            
+            
+            
+        ],
+        "disAdvantage" : "retry " ,
+        "drawback" : [
+            "If you used useEffect for data fetching if you have get server error or network error then you data may be loaded properly. in this case retry overcome this issue and get proper solution. retry value is automatically reload to trying get data from server site to client site."
+            
+        ]
     }
+    
 ]
