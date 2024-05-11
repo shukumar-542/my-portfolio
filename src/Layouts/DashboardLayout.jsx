@@ -9,8 +9,8 @@ const DashboardLayout = () => {
                 <Sidebar />
             </div>
             {/* <h1>sidebar</h1> */}
-            <div className="col-span-10">
-                <div className="bg-gray-200 h-14 flex items-center justify-end text-end gap-5 pr-16 sticky top-0">
+            <div className="col-span-10 ">
+                <div className="bg-[#211137] text-white h-14 flex items-center justify-end text-end gap-5 pr-16 sticky top-0">
                     <div>
                         <p className="font-semibold">shukumar542@gmail.com </p>
                         <p>Admin </p>
@@ -18,6 +18,7 @@ const DashboardLayout = () => {
                     <FaUser size={25} />
 
                 </div>
+                <Outlet/>
             </div>
         </div>
     );

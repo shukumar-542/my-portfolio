@@ -7,6 +7,10 @@ import MainLayouts from "../Layouts/MainLayouts";
 import About from "../Pages/About/About";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
 import DashboardLayout from "../Layouts/DashboardLayout";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import SkillsPage from "../Pages/SkillsPage/SkillsPage";
+import ProjectPage from "../Pages/ProjectPage/ProjectPage";
+import BlogsPage from "../Pages/BlogsPage/BlogsPage";
 
 const router = createBrowserRouter([
     {
@@ -29,8 +33,21 @@ const router = createBrowserRouter([
       element : <DashboardLayout/>,
       children : [
         {
-          
-        }
+          path : '/dashboard',
+          element : <Dashboard/>
+        },
+        {
+          path : 'skills',
+          element : <SkillsPage/>
+        },
+        {
+          path : 'projects',
+          element : <ProjectPage/>
+        },
+        {
+          path : 'blogs',
+          element : <BlogsPage/>
+        },
       ]
     },
     {
