@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import resume from '../../../assets/shukumar.pdf'
+import { NavLink } from "react-router-dom";
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const handleDownload = () => {
@@ -29,6 +30,7 @@ const NavBar = () => {
                                 <li className="text-white cursor-pointer "><a onClick={handleDownload} >Resume</a></li>
                                 <li className="text-white  "><a href="#skills">Skills</a></li>
                                 <li className="text-white   "><a href="#about">About Me</a></li>
+                                <NavLink to='/dashboard'>Dashboard</NavLink>
                                 <li className="text-white contact-btn cursor-pointer "><a href="#contact">Contact Me</a></li>
 
                             </ul>

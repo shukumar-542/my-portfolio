@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home/Home";
 import MainLayouts from "../Layouts/MainLayouts";
 import About from "../Pages/About/About";
 import BlogDetails from "../Pages/BlogDetails/BlogDetails";
+import DashboardLayout from "../Layouts/DashboardLayout";
 
 const router = createBrowserRouter([
     {
@@ -21,6 +22,15 @@ const router = createBrowserRouter([
           element : <About></About>
         }
         
+      ]
+    },
+    {
+      path : '/dashboard',
+      element : <DashboardLayout/>,
+      children : [
+        {
+          
+        }
       ]
     },
     {
