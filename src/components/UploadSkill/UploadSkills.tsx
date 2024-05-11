@@ -1,6 +1,7 @@
 import React from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 const UploadSkills = () => {
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
@@ -20,7 +21,11 @@ const UploadSkills = () => {
                 .then(data => {
                     if (data.insertedId) {
                         navigate('/dashboard/skills');
-                        // console.log(data?.insertedId);
+                        Swal.fire({
+                            title: "New Skills Added!",
+                            text: "Your Skill Added!",
+                            icon: "success"
+                          });
 
                     }
                 })

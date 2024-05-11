@@ -29,6 +29,7 @@
     "react-tsparticles": "^2.10.1",
     "react-type-animation": "^3.1.0",
     "sort-by": "^1.2.0",
+    "sweetalert2": "^11.11.0",
     "tsparticles": "^2.10.1"
   },
   "devDependencies": {
