@@ -39,6 +39,7 @@ const UploadProjects = () => {
 
             reset()
         } catch (error) {
+            
         }
     }
     return (

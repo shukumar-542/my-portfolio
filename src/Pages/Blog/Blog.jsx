@@ -4,10 +4,18 @@ import { Link } from 'react-router-dom';
 import { MdDateRange } from "react-icons/md";
 const Blog = () => {
 
-    const [blogs, setBlogs] = useState([])
+    const [blogs, setBlogs] = useState([]);
+
     useEffect(() => {
-        fetch('blog.json').then(res => res.json()).then(data => setBlogs(data))
-    }, [])
+        fetch('http://localhost:5000/api/v1/blog')
+            .then(response => response.json())
+            .then(data => {
+                setBlogs(data);
+            })
+            .catch(error => {
+                console.error('Error fetching skills:', error);
+            });
+    }, []);
 
 
     return (
@@ -20,7 +28,7 @@ const Blog = () => {
                 {
                     blogs.map((blog, index) => <Link to={`/blog/${blog?.id}`} key={index} className="max-w-xl bg-[#190D28]  rounded-xl shadow-xl cursor-pointer" data-aos="fade-right" data-aos-duration="1000">
                         <div className=" h-[300px] w-[100%] relative transition-all duration-500 serviceCard overflow-hidden rounded-md" >
-                            <img src={blog.image} className="h-[300px] w-[100%]" />
+                            <img src={blog.img} className="h-[300px] w-[100%]" />
 
                         </div>
                         <div className="absolute w-[80%] left-10 bottom-2 rounded-md shadow-md   bg-[#3A1E71] py-5   px-5 ">
