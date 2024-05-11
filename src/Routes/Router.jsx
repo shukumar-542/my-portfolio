@@ -11,6 +11,7 @@ import Dashboard from "../Pages/Dashboard/Dashboard";
 import SkillsPage from "../Pages/SkillsPage/SkillsPage";
 import ProjectPage from "../Pages/ProjectPage/ProjectPage";
 import BlogsPage from "../Pages/BlogsPage/BlogsPage";
+import UploadSkills from "../components/UploadSkill/UploadSkills";
 
 const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
         {
           path : 'blogs',
           element : <BlogsPage/>
+        },
+        {
+          path : 'uploadSkills',
+          element : <UploadSkills/>
         },
       ]
     },
