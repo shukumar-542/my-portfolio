@@ -23,7 +23,6 @@ const SkillsPage = () => {
     }, []);
 
     const handleDelete = (id) => {
-        console.log(id);
         try {
 
 
@@ -33,7 +32,6 @@ const SkillsPage = () => {
                 .then(res => res.json())
                 .then(data => {
                     if (data?.deletedCount > 0) {
-                        console.log(data);
                         Swal.fire({
                             title: "Skills has been deleted!",
                             text: "Your Skill Deleted!",

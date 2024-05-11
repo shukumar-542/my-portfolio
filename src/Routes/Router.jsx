@@ -12,6 +12,7 @@ import SkillsPage from "../Pages/SkillsPage/SkillsPage";
 import ProjectPage from "../Pages/ProjectPage/ProjectPage";
 import BlogsPage from "../Pages/BlogsPage/BlogsPage";
 import UploadSkills from "../components/UploadSkill/UploadSkills";
+import UploadProjects from "../components/UploadProjects/UploadProjects";
 
 const router = createBrowserRouter([
     {
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
         {
           path : 'uploadSkills',
           element : <UploadSkills/>
+        },
+        {
+          path : 'uploadProjects',
+          element : <UploadProjects/>
         },
       ]
     },
