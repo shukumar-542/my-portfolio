@@ -1,26 +1,45 @@
 
-import { SiNextdotjs, SiRedux,SiTypescript,SiTailwindcss,SiExpress ,SiFigma,SiReact ,SiJavascript ,SiFirebase ,SiNodedotjs     } from "react-icons/si";
-import { DiMongodb } from "react-icons/di";
-import { FaGithub } from "react-icons/fa";
+
+import { useEffect, useState } from "react";
 
 
 const Skill = () => {
+
+    const [skills, setSkills] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/api/v1/skill')
+            .then(response => response.json())
+            .then(data => {
+                setSkills(data);
+            })
+            .catch(error => {
+                console.error('Error fetching skills:', error);
+            });
+    }, []);
+
     return (
         <div id='skills' className="my-container   bg-[#0F0715]">
             <div className="text-center">
                 <h1 className="bg-gradient-to-r from-[#8A54F7] via-[#BFA2FB] to-[#ECE2FE] inline-block text-transparent bg-clip-text text-3xl lg:text-4xl font-bold  py-5 text-center ">My Skills</h1>
             </div>
             <div className='grid grid-cols-1 md:grid-cols-6 gap-5 my-container'>
-                <div className=' flex items-center justify-center  py-5 bg-[#1e112c] text-center  rounded-md hover:bg-[#2A1454] transition-all duration-400 '>
+                
+                {
+                    skills.map((skill) => <div key={skill?._id} className=' flex items-center justify-center  py-5 bg-[#1e112c] text-center  rounded-md hover:bg-[#2A1454] transition-all duration-400 '>
 
                     <div>
-                        <SiNextdotjs size={80} className='text-gray-200' />
-                        <p className='text-[#8750f7] font-semibold text-xl mt-2'>Next js</p>
+                        
+                        <img src={skill?.logo} className='w-24 h-24' alt="" />
+                        <p className='text-[#8750f7] font-semibold text-xl mt-2'>{skill?.name}</p>
                     </div>
 
-                </div>
+                </div> )
+                }
+                
+                
 
-                <div className=' flex items-center justify-center  py-5 bg-[#1e112c] text-center  rounded-md hover:bg-[#2A1454] transition-all duration-400 '>
+                {/* <div className=' flex items-center justify-center  py-5 bg-[#1e112c] text-center  rounded-md hover:bg-[#2A1454] transition-all duration-400 '>
 
                     <div>
                         <SiRedux size={80} className='text-[#7248B6]' />
@@ -107,7 +126,7 @@ const Skill = () => {
                         <p className='text-[#8750f7] font-semibold text-xl mt-2'>Nodejs </p>
                     </div>
 
-                </div>
+                </div> */}
                 
             </div>
 

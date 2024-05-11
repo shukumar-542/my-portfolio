@@ -7,19 +7,37 @@ import Heading from '../../../../components/ui/Heading';
 AOS.init();
 
 const Projects = () => {
-    const [projects, setProject] = useState([])
+    // const [projects, setProject] = useState([])
     const [singleProject, setSingleProject] = useState([])
 
     const handleProject = (project) => {
         setSingleProject(project);
     }
+    // useEffect(() => {
+    //     fetch('project.json').then(res => res.json()).then(data => setProject(data))
+    // }, [])
+
+
+
+    const [projects, steProjects] = useState([]);
+
     useEffect(() => {
-        fetch('project.json').then(res => res.json()).then(data => setProject(data))
-    }, [])
+        fetch('http://localhost:5000/api/v1/project')
+            .then(response => response.json())
+            .then(data => {
+                steProjects(data);
+            })
+            .catch(error => {
+                console.error('Error fetching skills:', error);
+            });
+    }, []);
+
+
+
+
     return (
         <section className='py-20 my-container bg-[#050709]  ' id='project'  >
             <div className='text-center'>
-                {/* <h1 className='text-3xl lg:text-4xl font-bold text-white'>My Recent Projects</h1> */}
                 <Heading>My Recent Works</Heading>
                 <p className='text-base text-[#777980]  md:text-lg'>Here you will get the overview of latest <br className="hidden md:block" /> three projects done by me.</p>
             </div>
