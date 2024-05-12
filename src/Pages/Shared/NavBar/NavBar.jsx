@@ -2,13 +2,21 @@ import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
 import resume from '../../../assets/shukumar.pdf'
 import { NavLink } from "react-router-dom";
+import { isLoggedIn, removedUser } from "../../../utils/auth.service";
 const NavBar = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const user = isLoggedIn()
+    const [isUser, setIsLoggedIn] = useState(user);
     const handleDownload = () => {
         const link = document.createElement('a');
         link.href = resume;
         link.download = 'resume.pdf'; 
         link.click();
+    }
+
+    const handleLogout =()=>{
+        removedUser()
+        setIsLoggedIn(!isUser)
     }
     
     return (
@@ -30,7 +38,12 @@ const NavBar = () => {
                                 <li className="text-white cursor-pointer "><a onClick={handleDownload} >Resume</a></li>
                                 <li className="text-white  "><a href="#skills">Skills</a></li>
                                 <li className="text-white   "><a href="#about">About Me</a></li>
-                                <NavLink to='/dashboard/skills'>Dashboard</NavLink>
+                                {
+                                    user ? <NavLink to='/dashboard/skills'>Dashboard</NavLink> : <NavLink to='/login'>Login</NavLink>
+                                }
+                                { user && <button onClick={()=>handleLogout()}>Logout</button>}
+                                
+                                
                                 <li className="text-white contact-btn cursor-pointer "><a href="#contact">Contact Me</a></li>
 
                             </ul>

@@ -14,6 +14,7 @@ import BlogsPage from "../Pages/BlogsPage/BlogsPage";
 import UploadSkills from "../components/UploadSkill/UploadSkills";
 import UploadProjects from "../components/UploadProjects/UploadProjects";
 import UploadBlog from "../components/ui/UploadBlog/UploadBlog";
+import Login from "../Pages/Login/Login";
 
 const router = createBrowserRouter([
     {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
     {
       path : "/blog/:id",
       element : <BlogDetails/>
+    },
+    {
+      path : "/login",
+      element : <Login/>
     }
   ]);
 

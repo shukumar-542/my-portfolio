@@ -16,6 +16,7 @@
     "daisyui": "^2.51.6",
     "firebase": "^9.22.1",
     "jodit-react": "^4.1.2",
+    "jwt-decode": "^4.0.0",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
     "match-sorter": "^6.3.1",
