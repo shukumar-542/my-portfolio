@@ -31,7 +31,7 @@ const UploadBlog = () => {
                 ...posts
             }
 
-            fetch('http://localhost:5000/api/v1/blog', {
+            fetch('https://protfolio-server-delta.vercel.app/api/v1/blog', {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(newBlog)
@@ -58,8 +58,8 @@ const UploadBlog = () => {
 
 
     return (
-        <div className="my-container">
-            <h1 >What&rsquo;s going in your mind</h1>
+        <div className="my-container w-full max-w-[420px] sm:max-w-[600px] lg:max-w-[100%] p-4 max-h-[90vh] overflow-auto">
+            <h1 className='text-2xl font-bold' >What&rsquo;s going in your mind?</h1>
 
             <form onSubmit={handlePostSubmit}>
                 <div className="flex flex-col space-y-2 w-full mt-5">

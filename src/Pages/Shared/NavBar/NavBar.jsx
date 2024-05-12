@@ -30,7 +30,7 @@ const NavBar = () => {
                                 <li className="text-white cursor-pointer "><a onClick={handleDownload} >Resume</a></li>
                                 <li className="text-white  "><a href="#skills">Skills</a></li>
                                 <li className="text-white   "><a href="#about">About Me</a></li>
-                                <NavLink to='/dashboard'>Dashboard</NavLink>
+                                <NavLink to='/dashboard/skills'>Dashboard</NavLink>
                                 <li className="text-white contact-btn cursor-pointer "><a href="#contact">Contact Me</a></li>
 
                             </ul>

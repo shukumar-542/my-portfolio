@@ -7,7 +7,7 @@ const Blog = () => {
     const [blogs, setBlogs] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/blog')
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/blog')
             .then(response => response.json())
             .then(data => {
                 setBlogs(data);
@@ -26,7 +26,7 @@ const Blog = () => {
 
             <div className="my-container grid grid-cols-1 md:grid-cols-3 gap-5">
                 {
-                    blogs.map((blog, index) => <Link to={`/blog/${blog?.id}`} key={index} className="max-w-xl bg-[#190D28]  rounded-xl shadow-xl cursor-pointer" data-aos="fade-right" data-aos-duration="1000">
+                    blogs.map((blog, index) => <Link to={`/blog/${blog?._id}`} key={index} className="max-w-xl bg-[#190D28]  rounded-xl shadow-xl cursor-pointer" data-aos="fade-right" data-aos-duration="1000">
                         <div className=" h-[300px] w-[100%] relative transition-all duration-500 serviceCard overflow-hidden rounded-md" >
                             <img src={blog.img} className="h-[300px] w-[100%]" />
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FiLink } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import { AiOutlineDelete } from "react-icons/ai";
 
 
 interface project {
@@ -22,7 +23,7 @@ const ProjectPage = () => {
     const [projects, steProjects] = useState<project[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/project')
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/project')
             .then(response => response.json())
             .then(data => {
                 steProjects(data);
@@ -38,7 +39,7 @@ const ProjectPage = () => {
         try {
 
 
-            fetch(`http://localhost:5000/api/v1/project/${id}`, {
+            fetch(`https://protfolio-server-delta.vercel.app/api/v1/project/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -62,7 +63,7 @@ const ProjectPage = () => {
 
     return (
         <div className='my-container'>
-            <h1 className='text-center'>All Projects</h1>
+            <h1 className='text-center text-2xl font-bold '>All Projects</h1>
 
             <div className='mb-5'>
                 <NavLink to='/dashboard/uploadProjects' className='contact-btn text-white'>Upload Projects</NavLink>
@@ -81,7 +82,7 @@ const ProjectPage = () => {
                             <th>Project Name</th>
                             <th>Project Description</th>
                             <th>Live Link</th>
-                            <th></th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -114,7 +115,7 @@ const ProjectPage = () => {
                                         <a target="_blank" href={project?.liveSite} rel='noreferrer' role="button" className="contact-btn px-3 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live </a>
                                     </button></td>
                                     <th>
-                                        <button onClick={()=>handleDelete(project?._id)} className="btn btn-ghost btn-xs">Delete</button>
+                                        <button onClick={()=>handleDelete(project?._id)} className=""><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 p-[2px] text-white rounded-sm ' /></button>
                                     </th>
                                 </tr>
 

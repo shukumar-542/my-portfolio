@@ -19,7 +19,7 @@ const UploadProjects = () => {
                 ...data
             }
 
-            fetch('http://localhost:5000/api/v1/project', {
+            fetch('https://protfolio-server-delta.vercel.app/api/v1/project', {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(newProjects)

@@ -8,7 +8,7 @@ const Skill = () => {
     const [skills, setSkills] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/skill')
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/skill')
             .then(response => response.json())
             .then(data => {
                 setSkills(data);

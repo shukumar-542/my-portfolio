@@ -2,17 +2,17 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import Heading from '../ui/Heading';
 const UploadSkills = () => {
     const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const onSubmit = (data) => {
-        // console.log(data);
         try {
             const newSkill = {
                 ...data
             }
 
-            fetch('http://localhost:5000/api/v1/skill', {
+            fetch('https://protfolio-server-delta.vercel.app/api/v1/skill', {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(newSkill)
@@ -36,14 +36,15 @@ const UploadSkills = () => {
 
     }
     return (
-        <div className='my-container'>
-            <h1 className='text-center '>Upload Your New Skills</h1>
+        <div className='my-container '>
+            <h1 className='text-center text-2xl font-bold  text-[#62328A]'>Upload Your New Skills</h1>
+
 
 
 
             <div className="flex justify-center ">
                 <div className="  w-full max-w-[420px] sm:max-w-[600px] lg:max-w-[600px] p-4 max-h-[90vh] overflow-auto">
-                    <div className="bg-white shadow-md  rounded-2xl  overflow-hidden">
+                    <div className=" shadow-md  rounded-2xl  overflow-hidden">
                         
                         <div className="p-5 lg:p-11">
                             <form onSubmit={handleSubmit(onSubmit)}>

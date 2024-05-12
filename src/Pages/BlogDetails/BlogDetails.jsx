@@ -1,35 +1,34 @@
 import { useParams } from "react-router-dom";
-import blogData from '../../../public/blog.json';
+import { useEffect, useState } from "react";
 
 const BlogDetails = () => {
 
     const { id } = useParams()
-    const post = blogData.find((post) => post.id === parseInt(id));
+    // const post = blogData.find((post) => post.id === parseInt(id));
+
+    const [blog, setBlogs] = useState('');
+
+    useEffect(() => {
+        fetch( `https://protfolio-server-delta.vercel.app/api/v1/blog/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                setBlogs(data);
+            })
+            .catch(error => {
+                console.error('Error fetching skills:', error);
+            });
+    }, [id]);
+
     return (
         <div className="bg-gray-200  text-white ">
             <div className="max-w-5xl mx-auto pt-10">
 
-                <img src={post?.image} className="w-[100%] h-[300px] mx-auto" alt="" />
+                <img src={blog?.img} className="w-[100%] h-[300px] mx-auto" alt="" />
                 <div className="text-gray-700 py-10 px-5">
-                    <h1 className=" text-4xl font-bold">{post?.title}</h1>
-                    <p className="mt-5">{post?.description}</p>
+                    <h1 className=" text-4xl font-bold">{blog?.title}</h1>
+                    <div dangerouslySetInnerHTML={{ __html: blog?.content }} />
 
-                    <h1 className=" text-4xl font-bold my-5 ">{post?.advantage}</h1>
-
-                    {
-                        post?.feature.map((fea, index) => <div key={index}>
-
-                            <li>{fea}</li>
-                        </div>)
-                    }
-
-                    <h1 className=" text-4xl font-bold my-5 ">{post?.disAdvantage}</h1>
-                    {
-                        post?.drawback.map((draw, index) => <div key={index}>
-
-                            <li>{draw}</li>
-                        </div>)
-                    }
+                    
                 </div>
             </div>
 

@@ -12,7 +12,7 @@ const SkillsPage = () => {
     const [skills, setSkills] = useState<Skill[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/skill')
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/skill')
             .then(response => response.json())
             .then(data => {
                 setSkills(data);
@@ -26,7 +26,7 @@ const SkillsPage = () => {
         try {
 
 
-            fetch(`http://localhost:5000/api/v1/skill/${id}`, {
+            fetch(`https://protfolio-server-delta.vercel.app/api/v1/skill/${id}`, {
                 method: "DELETE"
             })
                 .then(res => res.json())
@@ -61,13 +61,13 @@ const SkillsPage = () => {
                                 <img src={skill?.logo} className='w-32 h-32' alt="skill" />
                                 <div className='flex justify-between items-center mt-2'>
                                     <p>{skill?.name}</p>
-                                    <MdDelete onClick={() => handleDelete(skill?._id)} size={20} className='bg-[#7B48E2] text-red-500 cursor-pointer' />
+                                    <MdDelete onClick={() => handleDelete(skill?._id)} size={25} className='bg-red-500 text-white cursor-pointer p-[2px] rounded-sm hover:bg-red-600' />
                                 </div>
                             </div>
 
                         </div>
                     )) :
-                    <div>No skills found</div>
+                    <div>Loading..</div>
                 }
             </div>
         </div>

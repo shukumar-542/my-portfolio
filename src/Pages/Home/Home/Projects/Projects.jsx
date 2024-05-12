@@ -22,7 +22,7 @@ const Projects = () => {
     const [projects, steProjects] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/project')
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/project')
             .then(response => response.json())
             .then(data => {
                 steProjects(data);

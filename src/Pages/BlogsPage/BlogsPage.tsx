@@ -15,7 +15,7 @@ const BlogsPage = () => {
     const [blogs, setBlogs] = useState<blogPost[]>([]);
 
     useEffect(() => {
-        fetch('http://localhost:5000/api/v1/blog')
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/blog')
             .then(response => response.json())
             .then(data => {
                 setBlogs(data);
@@ -29,7 +29,7 @@ const BlogsPage = () => {
             try {
 
 
-                fetch(`http://localhost:5000/api/v1/blog/${id}`, {
+                fetch(`https://protfolio-server-delta.vercel.app/api/v1/blog/${id}`, {
                     method: "DELETE"
                 })
                     .then(res => res.json())
