@@ -15,6 +15,7 @@ import UploadSkills from "../components/UploadSkill/UploadSkills";
 import UploadProjects from "../components/UploadProjects/UploadProjects";
 import UploadBlog from "../components/ui/UploadBlog/UploadBlog";
 import Login from "../Pages/Login/Login";
+import ProjectDetails from "../Pages/ProjectDetails/ProjectDetalis";
 
 const router = createBrowserRouter([
     {
@@ -28,7 +29,11 @@ const router = createBrowserRouter([
         {
           path : '/about',
           element : <About></About>
-        }
+        },
+        {
+          path : '/project/:id',
+          element : <ProjectDetails/>
+        },
         
       ]
     },

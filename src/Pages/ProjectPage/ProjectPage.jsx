@@ -1,26 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { FiLink } from 'react-icons/fi';
+import  { useEffect, useState } from 'react';
+// import { FiLink } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AiOutlineDelete } from "react-icons/ai";
 
 
-interface project {
-    _id: string
-    name: string;
-    logo: string;
-    img: string;
-    description: string;
-    serverSite: string;
-    clientSite: string;
-    liveSite: string
 
-}
 
 
 const ProjectPage = () => {
 
-    const [projects, steProjects] = useState<project[]>([]);
+    const [projects, steProjects] = useState([]);
 
     useEffect(() => {
         fetch('https://protfolio-server-delta.vercel.app/api/v1/project')
@@ -57,6 +47,7 @@ const ProjectPage = () => {
                 })
 
         } catch (error) {
+            console.error(error.message)
         }
     }
 

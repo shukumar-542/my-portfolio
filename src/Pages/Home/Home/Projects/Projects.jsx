@@ -7,15 +7,26 @@ import Heading from '../../../../components/ui/Heading';
 AOS.init();
 
 const Projects = () => {
-    // const [projects, setProject] = useState([])
     const [singleProject, setSingleProject] = useState([])
+    const [showModal, setShowModal] = useState(false);
 
-    const handleProject = (project) => {
-        setSingleProject(project);
+    const handleTestimonial = (id) => {
+        fetch(`http://localhost:5000/api/v1/project/${id}`)
+            .then(response => response.json())
+            .then(data => {
+                setSingleProject(data);
+            })
+            .catch(error => {
+                console.error('Error fetching skills:', error);
+            });
+
+
+        setShowModal(true);
+
     }
-    // useEffect(() => {
-    //     fetch('project.json').then(res => res.json()).then(data => setProject(data))
-    // }, [])
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
 
 
 
@@ -31,6 +42,7 @@ const Projects = () => {
                 console.error('Error fetching skills:', error);
             });
     }, []);
+
 
 
 
@@ -51,7 +63,7 @@ const Projects = () => {
                             <h1 className='text-xl font-semibold'>{project.name}</h1>
                             <p className='mt-5'><span className='font-semibold'>Project overview : </span><span className='text-gray-300'>{project?.description}</span></p>
                             <div className='flex justify-center gap-5 my-5'>
-                                <label htmlFor="my_modal_6" onClick={() => handleProject(project)} className="border border-[#7E4AE8] px-6 py-2 cursor-pointer  text-sm text-white rounded-lg font-semibold uppercase tracking-wide hover:bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]">
+                                <label htmlFor="my_modal_6" onClick={() => handleTestimonial(project?._id)} className="border border-[#7E4AE8] px-6 py-2 cursor-pointer  text-sm text-white rounded-lg font-semibold uppercase tracking-wide hover:bg-gradient-to-r from-[#7E4AE8] to-[#371C6A]">
                                     View Details
                                 </label>
                                 <button >
@@ -74,8 +86,15 @@ const Projects = () => {
 
 
             </section>
+            {
+                showModal && (
 
-            <Modal singleProject={singleProject}></Modal>
+                    <Modal
+                        singleProject={singleProject}
+                        onClose={handleCloseModal} />
+                )
+            }
+            {/* <Modal singleProject={singleProject}></Modal> */}
         </section>
     );
 };
