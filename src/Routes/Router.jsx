@@ -16,6 +16,7 @@ import UploadProjects from "../components/UploadProjects/UploadProjects";
 import UploadBlog from "../components/ui/UploadBlog/UploadBlog";
 import Login from "../Pages/Login/Login";
 import UpdateSkills from "../Pages/SkillsPage/UpdateSkills";
+import UpdateProject from "../Pages/ProjectPage/UpdateProject";
 
 const router = createBrowserRouter([
     {
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
         {
           path : 'updateSkill/:id',
           element : <UpdateSkills/>
+        },
+        {
+          path : 'updateProject/:id',
+          element : <UpdateProject/>
         },
       ]
     },

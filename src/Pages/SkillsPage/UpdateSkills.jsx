@@ -1,11 +1,9 @@
 import { useEffect, useState } from "react";
-import { useForm } from "react-hook-form";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 
 const UpdateSkills = () => {
-    const { register, handleSubmit, reset } = useForm();
     const navigate = useNavigate();
     const [skill, setSkill] = useState([])
     const { id } = useParams()
@@ -21,11 +19,18 @@ const UpdateSkills = () => {
     }, [id])
 
 
-    const onSubmit = (data) => {
+    const updateSkills = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value;
+        const logo = form.logo.value
+        const updatedSkills = {name, logo}
+
+
         fetch(`http://localhost:5000/api/v1/skill/${id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(data)
+            body: JSON.stringify(updatedSkills)
         })
             .then(res => res.json())
             .then(data => {
@@ -38,7 +43,6 @@ const UpdateSkills = () => {
                     navigate('/dashboard/skills')
                 }
             })
-            reset()
 
     }
     return (
@@ -49,17 +53,17 @@ const UpdateSkills = () => {
                     <div className=" shadow-md  rounded-2xl  overflow-hidden">
 
                         <div className="p-5 lg:p-11">
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={updateSkills}>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="title" className="text-gray-400">Skill Name</label>
-                                    <input defaultValue={skill?.name} {...register("name")} type="text" className="border rounded-md p-2" placeholder="Type Your Skill" name="name" id="" />
+                                    <input defaultValue={skill?.name}  type="text" className="border rounded-md p-2" placeholder="Type Your Skill" name="name" id="" />
                                 </div>
 
 
 
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400">Image Url</label>
-                                    <input defaultValue={skill?.logo} {...register("logo")} type="text" className="border rounded-md p-2" placeholder="Type Your Image Url" name="logo" id="" />
+                                    <input defaultValue={skill?.logo}  type="text" className="border rounded-md p-2" placeholder="Type Your Image Url" name="logo" id="" />
                                 </div>
 
 

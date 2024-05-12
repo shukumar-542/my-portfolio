@@ -1,9 +1,10 @@
-import  { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 // import { FiLink } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import { AiOutlineDelete } from "react-icons/ai";
 import Loading from '../../components/ui/Loading/Loading';
+import { RiDeleteBin6Line } from 'react-icons/ri';
+import { FaRegEdit } from 'react-icons/fa';
 
 
 
@@ -80,10 +81,10 @@ const ProjectPage = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            projects && projects.length > 0 ?  
+                            projects && projects.length > 0 ?
                                 projects.map((project) =>
                                     <tr key={project?._id}>
-    
+
                                         <td>
                                             <div className="flex items-center gap-3">
                                                 <div className="avatar">
@@ -93,7 +94,7 @@ const ProjectPage = () => {
                                                 </div>
                                                 <div >
                                                     <div className="font-bold">{project?.name.slice(0, 9)}</div>
-    
+
                                                 </div>
                                             </div>
                                         </td>
@@ -105,16 +106,20 @@ const ProjectPage = () => {
                                         <td><button >
                                             <a target="_blank" href={project?.liveSite} rel='noreferrer' role="button" className="contact-btn px-3 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live </a>
                                         </button></td>
-                                        <th>
-                                            <button onClick={()=>handleDelete(project?._id)} className=""><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 p-[2px] text-white rounded-sm ' /></button>
+                                        <th className='flex items-center gap-2'>
+                                            <button onClick={() => handleDelete(project?._id)} className=""><RiDeleteBin6Line size={22} className=' text-red-500 p-[2px]  rounded-sm ' /></button>
+                                            <NavLink to={`/dashboard/updateProject/${project?._id}`}>
+
+                                                <FaRegEdit className='text-green-500 cursor-pointer' />
+                                            </NavLink>
                                         </th>
                                     </tr>
-    
+
                                 )
-                             : <Loading/>
+                                : <Loading />
                         }
 
-                       
+
 
 
                     </tbody>
