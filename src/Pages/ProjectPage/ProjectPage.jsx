@@ -3,6 +3,7 @@ import  { useEffect, useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import { AiOutlineDelete } from "react-icons/ai";
+import Loading from '../../components/ui/Loading/Loading';
 
 
 
@@ -78,40 +79,42 @@ const ProjectPage = () => {
                     </thead>
                     <tbody>
                         {/* row 1 */}
-
-
                         {
-                            projects.map((project) =>
-                                <tr key={project?._id}>
-
-                                    <td>
-                                        <div className="flex items-center gap-3">
-                                            <div className="avatar">
-                                                <div className="mask mask-squircle w-12 h-12">
-                                                    <img src={project?.img} alt="Avatar Tailwind CSS Component" />
+                            projects && projects.length > 0 ?  
+                                projects.map((project) =>
+                                    <tr key={project?._id}>
+    
+                                        <td>
+                                            <div className="flex items-center gap-3">
+                                                <div className="avatar">
+                                                    <div className="mask mask-squircle w-12 h-12">
+                                                        <img src={project?.img} alt="Avatar Tailwind CSS Component" />
+                                                    </div>
+                                                </div>
+                                                <div >
+                                                    <div className="font-bold">{project?.name.slice(0, 9)}</div>
+    
                                                 </div>
                                             </div>
-                                            <div >
-                                                <div className="font-bold">{project?.name.slice(0, 9)}</div>
-
-                                            </div>
-                                        </div>
-                                    </td>
-                                    <td>
-                                        {
-                                            project?.description.slice(0, 50)
-                                        }..
-                                    </td>
-                                    <td><button >
-                                        <a target="_blank" href={project?.liveSite} rel='noreferrer' role="button" className="contact-btn px-3 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live </a>
-                                    </button></td>
-                                    <th>
-                                        <button onClick={()=>handleDelete(project?._id)} className=""><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 p-[2px] text-white rounded-sm ' /></button>
-                                    </th>
-                                </tr>
-
-                            )
+                                        </td>
+                                        <td>
+                                            {
+                                                project?.description.slice(0, 50)
+                                            }..
+                                        </td>
+                                        <td><button >
+                                            <a target="_blank" href={project?.liveSite} rel='noreferrer' role="button" className="contact-btn px-3 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live </a>
+                                        </button></td>
+                                        <th>
+                                            <button onClick={()=>handleDelete(project?._id)} className=""><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 p-[2px] text-white rounded-sm ' /></button>
+                                        </th>
+                                    </tr>
+    
+                                )
+                             : <Loading/>
                         }
+
+                       
 
 
                     </tbody>

@@ -65,7 +65,7 @@ const BlogsPage = () => {
                             <div className='flex justify-between items-center my-2 px-2'>
                                 <button onClick={() => handleBlogDelete(blog?._id)}><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 text-white p-1 rounded-sm' /></button>
                             </div>
-                            <div dangerouslySetInnerHTML={{ __html: blog.content }} />
+                            <div dangerouslySetInnerHTML={{ __html: blog?.content }} />
                         </div>)
                     }
                 </div>

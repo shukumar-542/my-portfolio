@@ -1,15 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { MdDelete } from 'react-icons/md';
+import { useEffect, useState } from 'react';
+import { FaRegEdit } from 'react-icons/fa';
+// import { MdDelete } from 'react-icons/md';
+import { RiDeleteBin6Line } from "react-icons/ri";
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
-interface Skill {
-    _id: string
-    name: string;
-    logo: string;
-}
+
 
 const SkillsPage = () => {
-    const [skills, setSkills] = useState<Skill[]>([]);
+    const [skills, setSkills] = useState([]);
 
     useEffect(() => {
         fetch('https://protfolio-server-delta.vercel.app/api/v1/skill')
@@ -44,8 +42,11 @@ const SkillsPage = () => {
                 })
 
         } catch (error) {
+            console.error(error.message)
         }
     }
+
+
 
 
     return (
@@ -62,7 +63,13 @@ const SkillsPage = () => {
                                     <img src={skill?.logo} className='w-32 h-32' alt="skill" />
                                     <div className='flex justify-between items-center mt-2'>
                                         <p>{skill?.name}</p>
-                                        <MdDelete onClick={() => handleDelete(skill?._id)} size={25} className='bg-red-500 text-white cursor-pointer p-[2px] rounded-sm hover:bg-red-600' />
+                                        <div className='flex items-center gap-1'>
+                                            <RiDeleteBin6Line onClick={() => handleDelete(skill?._id)} size={22} className=' text-red-500 cursor-pointer p-[2px] rounded-sm ' />
+                                            <NavLink to={`/dashboard/updateSkill/${skill?._id}`}>
+
+                                                <FaRegEdit className='text-green-500 cursor-pointer' />
+                                            </NavLink>
+                                        </div>
                                     </div>
                                 </div>
 

@@ -37,7 +37,7 @@ const Projects = () => {
                 setSingleProject(data);
             })
             .catch(error => {
-                console.error('Error fetching skills:', error);
+                console.error(error);
             });
 
 
@@ -48,7 +48,6 @@ const Projects = () => {
         setShowModal(false);
     };
 
-    console.log(singleProject);
 
 
 
