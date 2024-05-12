@@ -1,13 +1,10 @@
 import { useEffect, useState } from "react";
-import { useFieldArray, useForm } from "react-hook-form";
-import { CiCircleRemove } from "react-icons/ci";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const UpdateProject = () => {
 
 
-    const { register, handleSubmit, reset,control } = useForm();
     const navigate = useNavigate();
     const [project, setProject] = useState([])
     const { id } = useParams()
@@ -22,17 +19,26 @@ const UpdateProject = () => {
             });
     }, [id])
 
-    const { fields, append, remove } = useFieldArray({
-        control,
-        name: 'technologies', // Name of the field array
-      });
+    console.log(project);
 
 
-    const onSubmit = (data) => {
+    const handleUpdateProject = (e) => {
+        e.preventDefault();
+        const form = e.target;
+        const name = form.name.value
+        const img = form.img.value
+        const clientSite = form.clientSite.value
+        const serverSite = form.serverSite.value
+        const liveSite = form.liveSite.value
+        const description = form.description.value
+        const feature = form.feature.value
+        const technologies = project.technologies
+
+        const updatedProject = {name,img,clientSite,serverSite,liveSite,description,feature,technologies}
         fetch(`http://localhost:5000/api/v1/project/${id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
-            body: JSON.stringify(data)
+            body: JSON.stringify(updatedProject)
         })
             .then(res => res.json())
             .then(data => {
@@ -45,7 +51,6 @@ const UpdateProject = () => {
                     navigate('/dashboard/projects')
                 }
             })
-        reset()
 
     }
 
@@ -61,41 +66,41 @@ const UpdateProject = () => {
                     <div className="bg-white shadow-md  rounded-2xl  overflow-hidden">
 
                         <div className="p-5 lg:p-11">
-                            <form onSubmit={handleSubmit(onSubmit)}>
+                            <form onSubmit={handleUpdateProject}>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="title" className="text-gray-400">Project Name</label>
-                                    <input {...register("name")} defaultValue={project?.name} type="text" className="border rounded-md p-2" placeholder="Type Your Project Name" name="name" id="" />
+                                    <input  defaultValue={project?.name} type="text" className="border rounded-md p-2" placeholder="Type Your Project Name" name="name" id="" />
                                 </div>
 
 
 
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400">Image Url</label>
-                                    <input defaultValue={project?.img} {...register("img")} type="text" className="border rounded-md p-2" placeholder="Type Your Image Url" name="img" id="" />
+                                    <input defaultValue={project?.img} type="text" className="border rounded-md p-2" placeholder="Type Your Image Url" name="img" id="" />
                                 </div>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400 mt-2">Client Site Link</label>
-                                    <input defaultValue={project?.clientSite} {...register("clientSite")} type="text" className="border rounded-md p-2" placeholder="Type Your client Url" name="clientSite" id="" />
+                                    <input defaultValue={project?.clientSite}  type="text" className="border rounded-md p-2" placeholder="Type Your client Url" name="clientSite" id="" />
                                 </div>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400 mt-2">Server Site Link</label>
-                                    <input defaultValue={project?.serverSite} {...register("serverSite")} type="text" className="border rounded-md p-2" placeholder="Type Your server Url" name="serverSite" id="" />
+                                    <input defaultValue={project?.serverSite} type="text" className="border rounded-md p-2" placeholder="Type Your server Url" name="serverSite" id="" />
                                 </div>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400 mt-2">Live Site Link</label>
-                                    <input defaultValue={project?.liveSite} {...register("liveSite")} type="text" className="border rounded-md p-2" placeholder="Type Your Live Url" name="liveSite" id="" />
+                                    <input defaultValue={project?.liveSite} type="text" className="border rounded-md p-2" placeholder="Type Your Live Url" name="liveSite" id="" />
                                 </div>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400 mt-2">Description</label>
-                                    <textarea defaultValue={project?.description} {...register("description")}  className="border rounded-md p-2" placeholder="Type Your description" name="description" id="" />
+                                    <textarea defaultValue={project?.description}  className="border rounded-md p-2" placeholder="Type Your description" name="description" id="" />
                                 </div>
                                 <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="img" className="text-gray-400 mt-2">Feature</label>
-                                    <textarea defaultValue={project?.feature} {...register("feature")}  className="border rounded-md p-2" placeholder="Type Your Project feature" name="feature" id="" />
+                                    <textarea defaultValue={project?.feature}  className="border rounded-md p-2" placeholder="Type Your Project feature" name="feature" id="" />
                                 </div>
 
 
-                                <div className="flex flex-col space-y-2 w-full">
+                                {/* <div className="flex flex-col space-y-2 w-full">
                                     <label htmlFor="technology" className="text-gray-400 mt-2">Technologies</label>
                                     {fields.map((field, index) => (
                                         <div  key={field.id} className='flex items-center'>
@@ -110,7 +115,7 @@ const UpdateProject = () => {
                                         </div>
                                     ))}
                                     <button type="button" className='bg-[#6C3796] text-white py-1 rounded-md w-[50%]' onClick={() => append(  '' )}>Add Technology</button>
-                                </div>
+                                </div> */}
 
 
                                 <button type="submit" className="w-full px-4 py-2 font-semibold shadow-md  uppercase cursor-pointer hover:bg-slate-200 transition-all  mt-4 text-center rounded-md bg-gradient-to-r from-sky-400 to-fuchsia-600 text-white">Add New Project</button>
