@@ -14,7 +14,7 @@ const Login = () => {
                 ...data
             }
 
-            fetch('http://localhost:5000/api/v1/login', {
+            fetch('https://protfolio-server-delta.vercel.app/api/v1/login', {
                 method: "POST",
                 headers: { "content-type": "application/json" },
                 body: JSON.stringify(user)

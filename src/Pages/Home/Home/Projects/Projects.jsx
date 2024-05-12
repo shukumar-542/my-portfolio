@@ -31,7 +31,7 @@ const Projects = () => {
 
 
     const handleTestimonial = (id) => {
-        fetch(`http://localhost:5000/api/v1/project/${id}`)
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/project/${id}`)
             .then(response => response.json())
             .then(data => {
                 setSingleProject(data);

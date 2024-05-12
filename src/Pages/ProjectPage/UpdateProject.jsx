@@ -9,7 +9,7 @@ const UpdateProject = () => {
     const [project, setProject] = useState([])
     const { id } = useParams()
     useEffect(() => {
-        fetch(`http://localhost:5000/api/v1/project/${id}`)
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/project/${id}`)
             .then(response => response.json())
             .then(data => {
                 setProject(data);
@@ -34,7 +34,7 @@ const UpdateProject = () => {
         const technologies = project.technologies
 
         const updatedProject = {name,img,clientSite,serverSite,liveSite,description,feature,technologies}
-        fetch(`http://localhost:5000/api/v1/project/${id}`, {
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/project/${id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(updatedProject)

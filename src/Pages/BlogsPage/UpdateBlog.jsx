@@ -18,7 +18,7 @@ const UpdateBlog = () => {
 
 
     useEffect(() => {
-        fetch(`http://localhost:5000/api/v1/blog/${id}`)
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/blog/${id}`)
             .then(response => response.json())
             .then(data => {
                 setSinglePost(data);
@@ -55,7 +55,7 @@ const UpdateBlog = () => {
         }
 
         console.log(id);
-        fetch(`http://localhost:5000/api/v1/blog/${id}`, {
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/blog/${id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(newBlog)

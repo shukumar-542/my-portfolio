@@ -8,7 +8,7 @@ const UpdateSkills = () => {
     const [skill, setSkill] = useState([])
     const { id } = useParams()
     useEffect(() => {
-        fetch(`http://localhost:5000/api/v1/skill/${id}`)
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/skill/${id}`)
             .then(response => response.json())
             .then(data => {
                 setSkill(data);
@@ -27,7 +27,7 @@ const UpdateSkills = () => {
         const updatedSkills = {name, logo}
 
 
-        fetch(`http://localhost:5000/api/v1/skill/${id}`, {
+        fetch(`https://protfolio-server-delta.vercel.app/api/v1/skill/${id}`, {
             method: "PATCH",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(updatedSkills)
