@@ -77,7 +77,6 @@ const UploadBlog = () => {
                         value={posts.content}
                         onChange={contentFieldChange}
                     />
-                    {/* <textarea rows={5} type="text" className="border rounded-md p-2" placeholder="Type here.." name="name" id="" /> */}
                 </div>
                 <button type="submit" className=" px-4 py-2  font-semibold shadow-md  uppercase cursor-pointer hover:bg-slate-200 transition-all  mt-4 text-center rounded-sm bg-gradient-to-r from-sky-400 to-fuchsia-600 text-white">Create Post</button>
 

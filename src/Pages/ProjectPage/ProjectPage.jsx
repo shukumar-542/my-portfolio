@@ -61,7 +61,7 @@ const ProjectPage = () => {
             </div>
 
             <div className="overflow-x-auto  flex justify-center mt-5">
-                <table className="table  w-[100%]">
+                <table className="table  ">
                     {/* head */}
                     <thead>
                         <tr>

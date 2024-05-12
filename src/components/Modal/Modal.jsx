@@ -2,10 +2,8 @@ import { FiLink } from "react-icons/fi";
 import { HiXMark } from "react-icons/hi2";
 // eslint-disable-next-line react/prop-types
 const Modal = ({ onClose, singleProject }) => {
-    console.log(singleProject);
     // eslint-disable-next-line react/prop-types
     const { name, img,  clientSite, liveSite, serverSite, description, feature, technologies } = singleProject
-    console.log(technologies);
 
     return (
 
@@ -29,7 +27,7 @@ const Modal = ({ onClose, singleProject }) => {
                                 <div className="text-white grid grid-cols-2">
                                     {
                                         // eslint-disable-next-line react/prop-types
-                                        technologies.map((technology,i)=> <ul  key={i}><li>{technology.name}</li></ul>)
+                                        technologies?.map((technology,i)=> <ul  key={i}><li>{technology.name}</li></ul>)
                                     }
                                 </div>
                                 <div className="flex gap-5 items-center mt-5">

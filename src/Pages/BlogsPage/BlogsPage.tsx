@@ -63,7 +63,6 @@ const BlogsPage = () => {
                         blogs.map((blog) => <div key={blog._id}>
                             <img src={blog?.img} className="w-[100%] h-[300px] mx-auto" alt="" />
                             <div className='flex justify-between items-center my-2 px-2'>
-                                <h1>{blog?.title}</h1>
                                 <button onClick={() => handleBlogDelete(blog?._id)}><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 text-white p-1 rounded-sm' /></button>
                             </div>
                             <div dangerouslySetInnerHTML={{ __html: blog.content }} />

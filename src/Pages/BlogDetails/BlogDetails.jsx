@@ -25,7 +25,7 @@ const BlogDetails = () => {
 
                 <img src={blog?.img} className="w-[100%] h-[300px] mx-auto" alt="" />
                 <div className="text-gray-700 py-10 px-5">
-                    <h1 className=" text-4xl font-bold">{blog?.title}</h1>
+                    {/* <h1 className=" text-4xl font-bold">{blog?.title}</h1> */}
                     <div dangerouslySetInnerHTML={{ __html: blog?.content }} />
 
                     

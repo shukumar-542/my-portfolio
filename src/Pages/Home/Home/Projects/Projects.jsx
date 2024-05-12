@@ -7,8 +7,28 @@ import Heading from '../../../../components/ui/Heading';
 AOS.init();
 
 const Projects = () => {
-    const [singleProject, setSingleProject] = useState([])
+    const [singleProject, setSingleProject] = useState({})
     const [showModal, setShowModal] = useState(false);
+
+
+
+
+
+
+    const [projects, steProjects] = useState([]);
+
+    useEffect(() => {
+        fetch('https://protfolio-server-delta.vercel.app/api/v1/project')
+            .then(response => response.json())
+            .then(data => {
+                steProjects(data);
+            })
+            .catch(error => {
+                console.error('Error fetching skills:', error);
+            });
+    }, []);
+
+
 
     const handleTestimonial = (id) => {
         fetch(`http://localhost:5000/api/v1/project/${id}`)
@@ -28,20 +48,8 @@ const Projects = () => {
         setShowModal(false);
     };
 
+    console.log(singleProject);
 
-
-    const [projects, steProjects] = useState([]);
-
-    useEffect(() => {
-        fetch('https://protfolio-server-delta.vercel.app/api/v1/project')
-            .then(response => response.json())
-            .then(data => {
-                steProjects(data);
-            })
-            .catch(error => {
-                console.error('Error fetching skills:', error);
-            });
-    }, []);
 
 
 
