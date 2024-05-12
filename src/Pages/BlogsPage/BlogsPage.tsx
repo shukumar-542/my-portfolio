@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { AiOutlineDelete } from 'react-icons/ai';
+import { FaRegEdit } from 'react-icons/fa';
+import { RiDeleteBin6Line } from 'react-icons/ri';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
 
@@ -26,28 +28,28 @@ const BlogsPage = () => {
     }, []);
 
     const handleBlogDelete = (id) => {
-            try {
+        try {
 
 
-                fetch(`https://protfolio-server-delta.vercel.app/api/v1/blog/${id}`, {
-                    method: "DELETE"
+            fetch(`https://protfolio-server-delta.vercel.app/api/v1/blog/${id}`, {
+                method: "DELETE"
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data?.deletedCount > 0) {
+                        Swal.fire({
+                            title: "Blog has been deleted!",
+                            text: "Your Skill Deleted!",
+                            icon: "success"
+                        });
+
+                    }
+                    const remaining = blogs.filter(skill => skill._id !== id)
+                    setBlogs(remaining)
                 })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data?.deletedCount > 0) {
-                            Swal.fire({
-                                title: "Blog has been deleted!",
-                                text: "Your Skill Deleted!",
-                                icon: "success"
-                            });
 
-                        }
-                        const remaining = blogs.filter(skill => skill._id !== id)
-                        setBlogs(remaining)
-                    })
-
-            } catch (error) {
-            }
+        } catch (error) {
+        }
 
     }
     return (
@@ -62,8 +64,12 @@ const BlogsPage = () => {
                     {
                         blogs.map((blog) => <div key={blog._id}>
                             <img src={blog?.img} className="w-[100%] h-[300px] mx-auto" alt="" />
-                            <div className='flex justify-between items-center my-2 px-2'>
-                                <button onClick={() => handleBlogDelete(blog?._id)}><AiOutlineDelete size={25} className='bg-red-500 hover:bg-red-600 text-white p-1 rounded-sm' /></button>
+                            <div className='flex justify-end gap-2 items-center my-2 px-2'>
+                                <button onClick={() => handleBlogDelete(blog?._id)}><RiDeleteBin6Line size={22} className='  text-red-500 rounded-sm' /></button>
+                                <NavLink to={`/dashboard/updateBlog/${blog?._id}`}>
+
+                                    <FaRegEdit size={22} className='text-green-500 cursor-pointer' />
+                                </NavLink>
                             </div>
                             <div dangerouslySetInnerHTML={{ __html: blog?.content }} />
                         </div>)

@@ -19,7 +19,6 @@ const UpdateProject = () => {
             });
     }, [id])
 
-    console.log(project);
 
 
     const handleUpdateProject = (e) => {

@@ -17,6 +17,7 @@ import UploadBlog from "../components/ui/UploadBlog/UploadBlog";
 import Login from "../Pages/Login/Login";
 import UpdateSkills from "../Pages/SkillsPage/UpdateSkills";
 import UpdateProject from "../Pages/ProjectPage/UpdateProject";
+import UpdateBlog from "../Pages/BlogsPage/UpdateBlog";
 
 const router = createBrowserRouter([
     {
@@ -73,6 +74,10 @@ const router = createBrowserRouter([
         {
           path : 'updateProject/:id',
           element : <UpdateProject/>
+        },
+        {
+          path : 'updateBlog/:id',
+          element : <UpdateBlog/>
         },
       ]
     },
