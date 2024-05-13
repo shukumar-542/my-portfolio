@@ -34,14 +34,14 @@ const NavBar = () => {
 
                     <div>
                         <ul className='items-center hidden space-x-8 lg:flex'>
-                            <li className="text-white  "><a href="#home">Home</a></li>
-                            <li className="text-white cursor-pointer "><a onClick={handleDownload} >Resume</a></li>
-                            <li className="text-white  "><a href="#skills">Skills</a></li>
-                            <li className="text-white   "><a href="#about">About Me</a></li>
+                            <li className="text-white hover:border-b hover:border-[#7645DA]  "><a href="#home">Home</a></li>
+                            <li className="text-white cursor-pointer hover:border-b hover:border-[#7645DA]   "><a onClick={handleDownload} >Resume</a></li>
+                            <li className="text-white hover:border-b hover:border-[#7645DA]    "><a href="#skills">Skills</a></li>
+                            <li className="text-white  hover:border-b hover:border-[#7645DA]   "><a href="#about">About Me</a></li>
                             {
-                                user ? <NavLink to='/dashboard/skills'>Dashboard</NavLink> : <NavLink to='/login'>Login</NavLink>
+                                user ? <NavLink to='/dashboard/skills' className="hover:border-b hover:border-[#7645DA]  " >Dashboard</NavLink> : <NavLink to='/login'>Login</NavLink>
                             }
-                            {user && <button onClick={() => handleLogout()}>Logout</button>}
+                            {user && <button className="hover:border-b hover:border-[#7645DA]   " onClick={() => handleLogout()}>Logout</button>}
 
 
                             <li className="text-white contact-btn cursor-pointer "><a href="#contact">Contact Me</a></li>
