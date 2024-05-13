@@ -10,7 +10,7 @@ const DashboardLayout = () => {
             </div>
             {/* <h1>sidebar</h1> */}
             <div className="col-span-8 md:col-span-10 ">
-                <div className="bg-[#211137] text-white h-14 flex items-center justify-end text-end gap-5 md:pr-16 sticky top-0">
+                <div className="bg-[#211137] text-white z-10 h-14 flex items-center justify-end text-end gap-5 md:pr-16 sticky top-0">
                     <div>
                         <p className="  md:font-semibold">shukumar542@gmail.com </p>
                         <p>Admin </p>

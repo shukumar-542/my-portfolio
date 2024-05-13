@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 // import { FiLink } from 'react-icons/fi';
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
-import Loading from '../../components/ui/Loading/Loading';
 import { RiDeleteBin6Line } from 'react-icons/ri';
 import { FaRegEdit } from 'react-icons/fa';
 
@@ -56,22 +55,17 @@ const ProjectPage = () => {
 
     return (
         <div className='my-container'>
-            <h1 className='text-center text-2xl font-bold '>All Projects</h1>
+            {/* <h1 className='text-center text-2xl font-bold '>All Projects</h1> */}
 
             <div className='mb-5'>
                 <NavLink to='/dashboard/uploadProjects' className='contact-btn text-white'>Upload Projects</NavLink>
             </div>
 
-            <div className="overflow-x-auto  flex justify-center mt-5">
-                <table className="table  ">
+            <div className="overflow-x-auto  ">
+                <table className="table w-full ">
                     {/* head */}
                     <thead>
                         <tr>
-                            {/* <th>
-                                <label>
-                                    <input type="checkbox" className="checkbox" />
-                                </label>
-                            </th> */}
                             <th>Project Name</th>
                             <th>Project Description</th>
                             <th>Live Link</th>
@@ -93,7 +87,7 @@ const ProjectPage = () => {
                                                     </div>
                                                 </div>
                                                 <div >
-                                                    <div className="font-bold">{project?.name.slice(0, 9)}</div>
+                                                    <div className="font-bold">{project?.name.slice(0, 15)}...</div>
 
                                                 </div>
                                             </div>
@@ -106,17 +100,19 @@ const ProjectPage = () => {
                                         <td><button >
                                             <a target="_blank" href={project?.liveSite} rel='noreferrer' role="button" className="contact-btn px-3 py-3 text-sm text-white rounded-lg font-semibold uppercase tracking-wide ">Live </a>
                                         </button></td>
-                                        <th className='flex items-center gap-2'>
-                                            <button onClick={() => handleDelete(project?._id)} className=""><RiDeleteBin6Line size={22} className=' text-red-500 p-[2px]  rounded-sm ' /></button>
-                                            <NavLink to={`/dashboard/updateProject/${project?._id}`}>
+                                        <th className=''>
+                                            <div className='flex items-center   gap-2'>
+                                                <button onClick={() => handleDelete(project?._id)} className=""><RiDeleteBin6Line size={22} className=' text-red-500 p-[2px]  rounded-sm ' /></button>
+                                                <NavLink to={`/dashboard/updateProject/${project?._id}`}>
 
-                                                <FaRegEdit className='text-green-500 cursor-pointer' />
-                                            </NavLink>
+                                                    <FaRegEdit className='text-green-500 cursor-pointer' />
+                                                </NavLink>
+                                            </div>
                                         </th>
                                     </tr>
 
                                 )
-                                : <Loading />
+                                : <p>Loading..</p>
                         }
 
 

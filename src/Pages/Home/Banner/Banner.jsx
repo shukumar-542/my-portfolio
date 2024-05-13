@@ -22,8 +22,8 @@ const Banner = () => {
         link.click();
     };
     return (
-        <section id='home' className='grid lg:grid-cols-2 justify-between bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF] items-center gap-2 my-container '>
-            <div className='order-2 lg:order-1 ps-5'>
+        <section id='home' className='grid lg:grid-cols-2 justify-center bg-gradient-to-r from-[#0F0715] to-[#211137] text-[#FFFFFF]  items-center gap-2 my-container '>
+            <div className='order-2 lg:order-1 ps-5 '>
                 <h1 className='text-xl lg:text-2xl font-serif'>
                     Hello, My name is
                     <br />
@@ -119,7 +119,7 @@ const Banner = () => {
 
             </div>
             {/* image  */}
-            <div className=' order-1 lg:order-2 hidden lg:block w-1/2 mx-auto '>
+            <div className='  order-1 lg:order-2 hidden lg:block w-1/2 mx-auto '>
 
                 <div className="rounded-xl w-80 h-96 mx-auto  mt-10 ">
                     <div className="flex flex-col justify-between h-full bg-white text-white rounded-lg transition-colors duration-300  border-[#5b37a1] hover:border-[#7340d8]   border-[3px]">

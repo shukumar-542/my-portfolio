@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 import { FaRegEdit } from 'react-icons/fa';
-// import { MdDelete } from 'react-icons/md';
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { NavLink } from 'react-router-dom';
 import Swal from 'sweetalert2';
+
 
 
 const SkillsPage = () => {
@@ -51,8 +51,10 @@ const SkillsPage = () => {
 
     return (
         <div className='my-container'>
-            <div className='mb-5'>
-                <NavLink to='/dashboard/uploadSkills' className='contact-btn text-white'>Upload Skills</NavLink>
+            <div className='mb-5 ml-4'>
+                <NavLink to='/dashboard/uploadSkills' className=' contact-btn text-white'>
+
+                    Upload Skills</NavLink>
             </div>
             <div className='w-full max-w-[420px] sm:max-w-[600px] lg:max-w-[100%] p-4 max-h-[70vh] overflow-auto'>
                 <div className='grid grid-cols-1 md:grid-cols-6 gap-5 '>

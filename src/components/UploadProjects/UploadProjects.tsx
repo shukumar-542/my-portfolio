@@ -44,7 +44,7 @@ const UploadProjects = () => {
     }
     return (
         <div className='my-container'>
-            <h1 className='text-center '>Upload Your New Projects</h1>
+            <h1 className='text-center text-2xl font-semibold '>Upload Your New Projects</h1>
 
 
 
@@ -100,7 +100,7 @@ const UploadProjects = () => {
                                             <button type="button" className=' text-white rounded-md' onClick={() => remove(index)}><CiCircleRemove size={30} className='text-red-400 hover:text-red-500' /></button>
                                         </div>
                                     ))}
-                                    <button type="button" className='bg-[#6C3796] text-white py-1 rounded-md w-[50%]' onClick={() => append(  '' )}>Add Technology</button>
+                                    <button type="button" className='bg-[#6C3796] text-white py-1 rounded-md w-[30%]' onClick={() => append(  '' )}>Add Technology</button>
                                 </div>
 
 
