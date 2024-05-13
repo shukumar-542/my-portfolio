@@ -18,6 +18,7 @@ import Login from "../Pages/Login/Login";
 import UpdateSkills from "../Pages/SkillsPage/UpdateSkills";
 import UpdateProject from "../Pages/ProjectPage/UpdateProject";
 import UpdateBlog from "../Pages/BlogsPage/UpdateBlog";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -37,7 +38,7 @@ const router = createBrowserRouter([
     },
     {
       path : '/dashboard',
-      element : <DashboardLayout/>,
+      element : <PrivateRoute> <DashboardLayout/></PrivateRoute>,
       children : [
         {
           path : '/dashboard',
