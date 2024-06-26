@@ -1,8 +1,8 @@
 
 const Footer = () => {
     return (
-
-        <div className="my-container flex justify-center pt-10 bg-[#0F0715] text-neutral-content">
+        <div className="bg-[#0F0715]">
+        <div className="my-container flex justify-center pt-10  text-neutral-content">
 
 
 
@@ -20,7 +20,7 @@ const Footer = () => {
                 </div>
             </div>
 
-
+            </div>
         </div>
     );
 };

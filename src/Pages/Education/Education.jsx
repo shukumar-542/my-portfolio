@@ -3,7 +3,7 @@ import { FaGraduationCap } from "react-icons/fa";
 import About from "../About/About";
 const Education = () => {
     return (
-        <div className="my-container bg-[#0F0715]">
+        <div className=" bg-[#0F0715]">
 
 
 
