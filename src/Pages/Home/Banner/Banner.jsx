@@ -7,7 +7,7 @@ import ReactIcon from '../../../assets/icons/react.png';
 import ExpressJsIcon from '../../../assets/icons/expressjs-icon.png';
 import MongodbIcon from '../../../assets/icons/mongodb.png';
 import portfolioImage from '../../../assets/icons/Shukumar.png';
-import resume from '../../../assets/shukumar.pdf'
+// import resume from '../../../assets/shukumar.pdf'
 import { TypeAnimation } from 'react-type-animation';
 import { SiNextdotjs, SiRedux } from 'react-icons/si';
 
@@ -16,10 +16,12 @@ import { SiNextdotjs, SiRedux } from 'react-icons/si';
 const Banner = () => {
 
     const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = resume;
-        link.download = 'resume.pdf';
-        link.click();
+        // const link = document.createElement('a');
+        // link.href = resume;
+        // link.download = 'resume.pdf';
+        // link.click();
+        window.open("https://drive.google.com/file/d/1k_D8yCZSdY1n7J0hQU17Kgl3ZGuBOocD/view", '_blank')
+
     };
     return (
         <section id='home' className=' bg-gradient-to-r from-[#0F0715] to-[#211137] '>

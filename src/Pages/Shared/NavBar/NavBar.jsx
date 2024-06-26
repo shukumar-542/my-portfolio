@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Bars4Icon, XMarkIcon } from '@heroicons/react/24/solid'
-import resume from '../../../assets/shukumar.pdf'
+// import resume from '../../../assets/shukumar.pdf'
 import { NavLink } from "react-router-dom";
 import { isLoggedIn, removedUser } from "../../../utils/auth.service";
 const NavBar = () => {
@@ -8,10 +8,11 @@ const NavBar = () => {
     const user = isLoggedIn()
     const [isUser, setIsLoggedIn] = useState(user);
     const handleDownload = () => {
-        const link = document.createElement('a');
-        link.href = resume;
-        link.download = 'resume.pdf';
-        link.click();
+        // const link = document.createElement('a');
+        // link.href = resume;
+        // link.download = 'resume.pdf';
+        // link.click();
+        window.open( "https://drive.google.com/file/d/1k_D8yCZSdY1n7J0hQU17Kgl3ZGuBOocD/view", '_blank')
     }
 
     const handleLogout = () => {
